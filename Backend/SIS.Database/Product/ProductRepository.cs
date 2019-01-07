@@ -1,4 +1,7 @@
-﻿using RedStarter.Database.DataContract.Note;
+﻿using AutoMapper;
+using RedStarter.Database.Contexts;
+using RedStarter.Database.DataContract.Note;
+using RedStarter.Database.Entities.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,8 +11,25 @@ namespace RedStarter.Database.Product
 {
     public class ProductRepository : IProductRepository
     {
-        public Task<bool> CreateProduct(ProductCreateRAO rao)
+        private readonly SISContext _context;
+        private readonly IMapper _mapper;
+
+        public ProductRepository(SISContext context, IMapper mapper)
         {
+            _context = context;
+            _mapper = mapper;
+            
+        }
+
+
+        public async Task<bool> CreateProduct(ProductCreateRAO rao)
+        {
+            var entity = _mapper.Map<ProductEntity>(rao);
+
+            _context.ProductTableAccess.AddAsync(entity);
+
+            return await _context.SaveChangesAsync() == 1;
+
 
             throw new NotImplementedException();
         }

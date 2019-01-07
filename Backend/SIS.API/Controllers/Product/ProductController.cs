@@ -31,9 +31,9 @@ namespace RedStarter.API.Controllers.Product
             dto.DateCreated = DateTime.Now;
 
 
-            await _manager.CreateProduct(dto);
-
-            return Ok();
+            if (await _manager.CreateProduct(dto))
+                return StatusCode(201);
+            throw new Exception();
         }
         
     }

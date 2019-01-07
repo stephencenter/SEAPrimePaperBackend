@@ -20,9 +20,10 @@ namespace RedStarter.Business.Product
         }
         public async Task<bool> CreateProduct(ProductCreateDTO dto)
         {
-            ProductCreateRAO rao = _mapper.Map<ProductCreateRAO>(dto);
+            var rao = _mapper.Map<ProductCreateRAO>(dto);
 
-            await _repository.CreateProduct(rao);
+            if (await _repository.CreateProduct(rao))
+                return true;
 
             throw new NotImplementedException();
         }
