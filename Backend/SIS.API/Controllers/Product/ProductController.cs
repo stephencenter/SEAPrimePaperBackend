@@ -16,10 +16,12 @@ namespace RedStarter.API.Controllers.Product
     public class ProductController : Controller
     {
         private readonly IMapper _mapper;
+        private readonly IProductManager _manager;
 
-        public ProductController(IMapper mapper)
+        public ProductController(IMapper mapper, IProductManager manager)
         {
             _mapper = mapper;
+            _manager = manager;
         }
 
         [HttpPost]
@@ -27,6 +29,9 @@ namespace RedStarter.API.Controllers.Product
         {
             var dto = _mapper.Map<ProductCreateDTO>(request);
             dto.DateCreated = DateTime.Now;
+
+
+            await _manager.CreateProduct(dto);
 
             return Ok();
         }
