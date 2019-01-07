@@ -10,5 +10,7 @@ namespace RedStarter.Database.DataContract.Note
         public string Description { get; set; }
         public double Price { get; set; }
         public DateTimeOffset DateCreated { get; set; }
+        public int OwnerId { get; set; }
+
     }
 }

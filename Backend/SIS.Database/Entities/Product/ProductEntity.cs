@@ -20,6 +20,10 @@ namespace RedStarter.Database.Entities.Product
         public double Price { get; set; }
 
         [Required]
+        public int OwnerId { get; set; }
+
+
+        [Required]
         public DateTimeOffset DateCreated { get; set; }
     }
 }
