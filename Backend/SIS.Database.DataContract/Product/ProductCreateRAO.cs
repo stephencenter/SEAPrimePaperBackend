@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Database.DataContract.Note
+namespace RedStarter.Database.DataContract.Product
 {
     public class ProductCreateRAO
     {

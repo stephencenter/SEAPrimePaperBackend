@@ -24,7 +24,7 @@ using RedStarter.Database.Authorization;
 using RedStarter.Database.Contexts;
 using RedStarter.Database.DataContract.Application;
 using RedStarter.Database.DataContract.Authorization.Interfaces;
-using RedStarter.Database.DataContract.Note;
+using RedStarter.Database.DataContract.Product;
 using RedStarter.Database.DataContract.Roles.Interfaces;
 using RedStarter.Database.Entities.People;
 using RedStarter.Database.Entities.Roles;

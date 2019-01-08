@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using RedStarter.Business.DataContract.Product;
-using RedStarter.Database.DataContract.Note;
+using RedStarter.Database.DataContract.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,14 +18,29 @@ namespace RedStarter.Business.Product
             _mapper = mapper;
             _repository = repository;
         }
+
         public async Task<bool> CreateProduct(ProductCreateDTO dto)
         {
             var rao = _mapper.Map<ProductCreateRAO>(dto);
 
             if (await _repository.CreateProduct(rao))
+            {
                 return true;
+            }
 
-            throw new NotImplementedException();
+            return false;
+        }
+
+        public async Task<bool> EditProduct(ProductEditDTO dto)
+        {
+            var rao = _mapper.Map<ProductEditRAO>(dto);
+
+            if (await _repository.EditProduct(rao))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

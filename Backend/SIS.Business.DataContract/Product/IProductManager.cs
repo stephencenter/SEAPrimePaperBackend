@@ -8,5 +8,6 @@ namespace RedStarter.Business.DataContract.Product
     public interface IProductManager
     {
         Task<bool> CreateProduct(ProductCreateDTO dto);
+        Task<bool> EditProduct(ProductEditDTO dto);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using RedStarter.API.DataContract.Product;
 using RedStarter.Business.DataContract.Product;
-using RedStarter.Database.DataContract.Note;
+using RedStarter.Database.DataContract.Product;
 using RedStarter.Database.Entities.Product;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,9 @@ namespace RedStarter.API.MappingProfiles
             CreateMap<ProductCreateRequest, ProductCreateDTO>();
             CreateMap<ProductCreateDTO, ProductCreateRAO>();
             CreateMap<ProductCreateRAO, ProductEntity>();
+
+            CreateMap<ProductEditRequest, ProductEditDTO>();
+            CreateMap<ProductEditDTO, ProductEditRAO>();
         }
     }
 }

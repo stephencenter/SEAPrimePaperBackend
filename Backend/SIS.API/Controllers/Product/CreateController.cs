@@ -11,22 +11,22 @@ using RedStarter.Business.DataContract.Product;
 
 namespace RedStarter.API.Controllers.Product
 {
-    [Route("api/[controller]")]
+    [Route("api/Product/[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class CreateController : Controller
     {
         private readonly IMapper _mapper;
         private readonly IProductManager _manager;
 
-        public ProductController(IMapper mapper, IProductManager manager)
+        public CreateController(IMapper mapper, IProductManager manager)
         {
             _mapper = mapper;
             _manager = manager;
         }
 
         [HttpPost]
-        //[Authorize(Roles ="Admin")]
-        public async Task<IActionResult> PostProduct(ProductCreateRequest request)
+        [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> CreateProduct(ProductCreateRequest request)
         {
 
             if (!ModelState.IsValid)
@@ -42,9 +42,11 @@ namespace RedStarter.API.Controllers.Product
 
 
             if (await _manager.CreateProduct(dto))
+            {
                 return StatusCode(201);
+            }
+
             throw new Exception();
         }
-        
     }
 }
