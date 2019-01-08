@@ -34,22 +34,22 @@ namespace RedStarter.Database.Application
             var contactEntity = _mapper.Map<ContactEntity>(applicationCreate.Contact);
             contactEntity.ApplicationEntityId = ApplicationGuid;
 
-            var demographicEntity = _mapper.Map<DemographicEntity>(applicationCreate.Demographic);
-            demographicEntity.ApplicationEntityId = ApplicationGuid;
+            //var demographicEntity = _mapper.Map<DemographicEntity>(applicationCreate.Demographic);
+            //demographicEntity.ApplicationEntityId = ApplicationGuid;
 
-            var educationEntity = _mapper.Map<EducationEntity>(applicationCreate.Education);
-            educationEntity.ApplicationEntityId = ApplicationGuid;
+            //var educationEntity = _mapper.Map<EducationEntity>(applicationCreate.Education);
+            //educationEntity.ApplicationEntityId = ApplicationGuid;
 
-            var experienceEntity = _mapper.Map<ExperienceEntity>(applicationCreate.Experience);
-            experienceEntity.ApplicationEntityId = ApplicationGuid;
+            //var experienceEntity = _mapper.Map<ExperienceEntity>(applicationCreate.Experience);
+            //experienceEntity.ApplicationEntityId = ApplicationGuid;
 
             await _context.ApplicationTableAccess.AddAsync(applicationEntity);
             await _context.ContactTableAccess.AddAsync(contactEntity);
-            await _context.DemographicTableAccess.AddAsync(demographicEntity);
-            await _context.EducationTableAccess.AddAsync(educationEntity);
-            await _context.ExperienceTableAccess.AddAsync(experienceEntity);
+            //await _context.DemographicTableAccess.AddAsync(demographicEntity);
+            //await _context.EducationTableAccess.AddAsync(educationEntity);
+            //await _context.ExperienceTableAccess.AddAsync(experienceEntity);
 
-            return await _context.SaveChangesAsync() == 5;
+            return await _context.SaveChangesAsync() == 2;
         }
 
         public async Task<IEnumerable<ApplicationListItemRAO>> GetAllApplications()

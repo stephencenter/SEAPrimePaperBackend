@@ -15,9 +15,9 @@ namespace RedStarter.API.MappingProfiles
             CreateMap<ApplicationCreateDTO, ApplicationCreateRAO>();     
             CreateMap<ApplicationCreateRAO, ApplicationEntity>();
             CreateMap<ContactRAO, ContactEntity>();
-            CreateMap<DemographicRAO, DemographicEntity>();
-            CreateMap<EducationRAO, EducationEntity>();
-            CreateMap<ExperienceRAO, ExperienceEntity>();
+            //CreateMap<DemographicRAO, DemographicEntity>();
+            //CreateMap<EducationRAO, EducationEntity>();
+            //CreateMap<ExperienceRAO, ExperienceEntity>();
         }
     }
 }

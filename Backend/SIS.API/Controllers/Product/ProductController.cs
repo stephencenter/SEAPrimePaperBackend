@@ -25,6 +25,7 @@ namespace RedStarter.API.Controllers.Product
         }
 
         [HttpPost]
+        //[Authorize(Roles ="Admin")]
         public async Task<IActionResult> PostProduct(ProductCreateRequest request)
         {
 

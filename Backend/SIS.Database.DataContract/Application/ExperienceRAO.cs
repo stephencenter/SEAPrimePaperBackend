@@ -6,6 +6,6 @@ namespace RedStarter.Database.DataContract.Application
 {
     public class ExperienceRAO
     {
-        public string EmploymentStatus { get; set; }
+        //public string EmploymentStatus { get; set; }
     }
 }
