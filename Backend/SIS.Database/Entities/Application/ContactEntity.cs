@@ -9,7 +9,6 @@ namespace RedStarter.Database.Entities.Application
     {
         [Key]
         public Guid ApplicationEntityId { get; set; }
-
         public string Email { get; set; }
         public string Phone { get; set; }
         public string StreetAddress { get; set; }
