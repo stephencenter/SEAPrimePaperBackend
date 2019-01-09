@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using RedStarter.Business.DataContract.Product;
 
 namespace RedStarter.Database.Product
 {
@@ -38,6 +40,25 @@ namespace RedStarter.Database.Product
             entity.Price = rao.Price;
 
             return await _context.SaveChangesAsync() == 1;
+        }
+
+        public async Task<ProductGetListItemRAO> GetProductById(int id)
+        {
+            var query =  _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
+
+            var rao = _mapper.Map<ProductGetListItemRAO>(query);
+
+            return rao;
+        }
+
+        public async Task<IEnumerable<ProductGetListItemRAO>> GetProducts()
+        {
+
+            var query = await _context.ProductTableAccess.ToArrayAsync();
+            var rao = _mapper.Map<IEnumerable<ProductGetListItemRAO>>(query);
+
+            return rao;
+
         }
     }
 }

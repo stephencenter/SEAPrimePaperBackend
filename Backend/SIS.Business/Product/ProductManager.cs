@@ -42,5 +42,21 @@ namespace RedStarter.Business.Product
 
             return false;
         }
+
+        public async Task<ProductGetListItemDTO> GetProductById(int id)
+        {
+            var rao = await _repository.GetProductById(id);
+            var dto = _mapper.Map<ProductGetListItemDTO>(rao);
+
+            return dto;
+        }
+
+        public async Task<IEnumerable<ProductGetListItemDTO>> GetProducts()
+        {
+            var rao = await _repository.GetProducts();
+            var dto = _mapper.Map<IEnumerable<ProductGetListItemDTO>>(rao);
+
+            return dto;
+        }
     }
 }
