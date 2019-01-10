@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RedStarter.API.DataContract.Product;
-using RedStarter.Business.DataContract.Product;
+using PrimePaper.API.DataContract.Product;
+using PrimePaper.Business.DataContract.Product;
 
-namespace RedStarter.API.Controllers.Product
+namespace PrimePaper.API.Controllers.Product
 {
     [AllowAnonymous]
     [Route("api/[controller]")]
@@ -102,8 +102,6 @@ namespace RedStarter.API.Controllers.Product
             {
                 return StatusCode(400);
             }
-
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             var dto = await _manager.GetProductById(id);
             var response = _mapper.Map<ProductResponse>(dto);

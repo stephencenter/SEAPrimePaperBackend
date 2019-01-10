@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.Authorization.DTOs
+namespace PrimePaper.Business.DataContract.Authorization.DTOs
 {
     public class ReceivedExistingUserDTO
     {

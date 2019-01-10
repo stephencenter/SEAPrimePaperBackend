@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace RedStarter.Business.DataContract.Contact.DTOs
+namespace PrimePaper.Business.DataContract.Contact.DTOs
 {
     public class ContactCreateDTO
     {
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CompanyName { get; set; }

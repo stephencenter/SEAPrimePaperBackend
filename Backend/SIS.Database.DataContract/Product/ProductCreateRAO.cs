@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Database.DataContract.Product
+namespace PrimePaper.Database.DataContract.Product
 {
     public class ProductCreateRAO
     {
@@ -10,7 +10,6 @@ namespace RedStarter.Database.DataContract.Product
         public string Description { get; set; }
         public double Price { get; set; }
         public DateTimeOffset DateCreated { get; set; }
-        public int OwnerId { get; set; }
 
     }
 }

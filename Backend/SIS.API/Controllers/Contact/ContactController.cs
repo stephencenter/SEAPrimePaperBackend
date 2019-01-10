@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using RedStarter.API.DataContract.Contact;
-using RedStarter.Business.DataContract.Contact.DTOs;
-using RedStarter.Business.DataContract.Contact.Interfaces;
+using PrimePaper.API.DataContract.Contact;
+using PrimePaper.Business.DataContract.Contact.DTOs;
+using PrimePaper.Business.DataContract.Contact.Interfaces;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace RedStarter.API.Controllers.Contact
+namespace PrimePaper.API.Controllers.Contact
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -28,14 +28,12 @@ namespace RedStarter.API.Controllers.Contact
             {
                 return StatusCode(400);
             }
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
 
+            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
             var dto = _mapper.Map<ContactCreateDTO>(contactCreateRequest);
             dto.OwnerId = identityClaimNum;
 
-            var created = await _contactCreateManager.ContactCreate(dto);
-
-            if (created)
+            if (await _contactCreateManager.ContactCreate(dto))
                 return StatusCode(201); //TODO: Return URL of new resource
 
             return StatusCode(500);

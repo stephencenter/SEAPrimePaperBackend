@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using RedStarter.Database.Contexts;
-using RedStarter.Database.DataContract.Product;
-using RedStarter.Database.Entities.Product;
+using PrimePaper.Database.Contexts;
+using PrimePaper.Database.DataContract.Product;
+using PrimePaper.Database.Entities.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using RedStarter.Business.DataContract.Product;
+using PrimePaper.Business.DataContract.Product;
 
-namespace RedStarter.Database.Product
+namespace PrimePaper.Database.Product
 {
     public class ProductRepository : IProductRepository
     {

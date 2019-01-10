@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.Contact
+namespace PrimePaper.Business.DataContract.Contact
 {
    public class ContactListItemDTO
     {

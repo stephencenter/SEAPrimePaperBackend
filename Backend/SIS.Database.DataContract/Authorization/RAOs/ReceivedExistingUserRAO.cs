@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Database.DataContract.Authorization.RAOs
+namespace PrimePaper.Database.DataContract.Authorization.RAOs
 {
     public class ReceivedExistingUserRAO
     {
