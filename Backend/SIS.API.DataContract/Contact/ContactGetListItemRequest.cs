@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.API.DataContract.Contact
+namespace PrimePaper.API.DataContract.Contact
 {
     class ContactGetListItemRequest
     {

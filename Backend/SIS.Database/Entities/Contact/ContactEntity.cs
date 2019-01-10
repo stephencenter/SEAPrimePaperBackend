@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace RedStarter.Database.Entities.Application
+namespace PrimePaper.Database.Entities.Application
 {
     public class ContactEntity
     {

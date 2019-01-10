@@ -1,10 +1,10 @@
 using AutoMapper;
-using RedStarter.API.DataContract.Authorization;
-using RedStarter.Business.DataContract.Authorization.DTOs;
-using RedStarter.Database.DataContract.Authorization.RAOs;
-using RedStarter.Database.Entities.People;
+using PrimePaper.API.DataContract.Authorization;
+using PrimePaper.Business.DataContract.Authorization.DTOs;
+using PrimePaper.Database.DataContract.Authorization.RAOs;
+using PrimePaper.Database.Entities.People;
 
-namespace RedStarter.API
+namespace PrimePaper.API
 {
     public class MappingProfile : Profile
     {

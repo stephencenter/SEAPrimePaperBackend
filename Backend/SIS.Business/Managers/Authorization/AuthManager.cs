@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Configuration;
-using RedStarter.Business.DataContract.Authorization.DTOs;
-using RedStarter.Business.DataContract.Authorization.Interfaces;
-using RedStarter.Database.DataContract.Authorization.Interfaces;
-using RedStarter.Database.DataContract.Authorization.RAOs;
+using PrimePaper.Business.DataContract.Authorization.DTOs;
+using PrimePaper.Business.DataContract.Authorization.Interfaces;
+using PrimePaper.Database.DataContract.Authorization.Interfaces;
+using PrimePaper.Database.DataContract.Authorization.RAOs;
 using System;
 using System.Threading.Tasks;
 
-namespace RedStarter.Business.Managers.Authorization
+namespace PrimePaper.Business.Managers.Authorization
 {
     public class AuthManager : IAuthManager
     {

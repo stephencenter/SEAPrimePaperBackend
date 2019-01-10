@@ -1,4 +1,4 @@
-namespace RedStarter.API.DataContract.Authorization
+namespace PrimePaper.API.DataContract.Authorization
 {
     public class LoginUserRequest
     {

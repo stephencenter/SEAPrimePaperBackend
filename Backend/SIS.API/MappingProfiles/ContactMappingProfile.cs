@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using RedStarter.API.DataContract.Contact;
-using RedStarter.Business.DataContract.Contact;
-using RedStarter.Business.DataContract.Contact.DTOs;
-using RedStarter.Database.DataContract.Application;
-using RedStarter.Database.Entities.Application;
+using PrimePaper.API.DataContract.Contact;
+using PrimePaper.Business.DataContract.Contact;
+using PrimePaper.Business.DataContract.Contact.DTOs;
+using PrimePaper.Database.DataContract.Application;
+using PrimePaper.Database.Entities.Application;
 
-namespace RedStarter.API.MappingProfiles
+namespace PrimePaper.API.MappingProfiles
 {
     public class ContactMappingProfile : Profile
     {

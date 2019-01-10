@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.API.DataContract.Product
+namespace PrimePaper.API.DataContract.Product
 {
     public class ProductCreateRequest
     {

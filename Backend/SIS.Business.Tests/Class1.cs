@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RedStarter.Business.Tests
+namespace PrimePaper.Business.Tests
 {
     public class Class1
     {
