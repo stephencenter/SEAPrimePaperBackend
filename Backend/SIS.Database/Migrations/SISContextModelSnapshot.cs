@@ -89,7 +89,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.ContactEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.Application.ContactEntity", b =>
                 {
                     b.Property<int>("ContactEntityId")
                         .ValueGeneratedOnAdd()
@@ -133,7 +133,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("ContactTableAccess");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.People.UserEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.People.UserEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,7 +185,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Product.ProductEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.Product.ProductEntity", b =>
                 {
                     b.Property<int>("ProductEntityId")
                         .ValueGeneratedOnAdd()
@@ -206,7 +206,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("ProductTableAccess");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Roles.RoleEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.RoleEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -231,7 +231,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Roles.UserRoleEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.UserRoleEntity", b =>
                 {
                     b.Property<int>("UserId");
 
@@ -246,7 +246,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("RedStarter.Database.Entities.Roles.RoleEntity")
+                    b.HasOne("PrimePaper.Database.Entities.Roles.RoleEntity")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -254,7 +254,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("RedStarter.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -262,7 +262,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("RedStarter.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -270,20 +270,20 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("RedStarter.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Roles.UserRoleEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.UserRoleEntity", b =>
                 {
-                    b.HasOne("RedStarter.Database.Entities.Roles.RoleEntity", "Role")
+                    b.HasOne("PrimePaper.Database.Entities.Roles.RoleEntity", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("RedStarter.Database.Entities.People.UserEntity", "User")
+                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
