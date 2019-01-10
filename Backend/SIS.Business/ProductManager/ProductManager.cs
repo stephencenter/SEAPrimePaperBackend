@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using RedStarter.Business.DataContract.Product;
-using RedStarter.Database.DataContract.Product;
+using PrimePaper.Business.DataContract.Product;
+using PrimePaper.Database.DataContract.Product;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedStarter.Business.Product
+namespace PrimePaper.Business.Product
 {
     public class ProductManager : IProductManager
     {

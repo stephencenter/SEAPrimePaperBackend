@@ -1,10 +1,10 @@
-﻿using RedStarter.Business.DataContract.SeedData;
-using RedStarter.Database.DataContract.SeedData;
+﻿using PrimePaper.Business.DataContract.SeedData;
+using PrimePaper.Database.DataContract.SeedData;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.SeedData
+namespace PrimePaper.Business.SeedData
 {
     public class SeedDataManager : ISeedDataManager
     {

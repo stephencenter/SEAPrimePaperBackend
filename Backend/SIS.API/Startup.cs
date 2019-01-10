@@ -12,30 +12,30 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using RedStarter.API.MappingProfiles;
-using RedStarter.Business.DataContract.Authorization.Interfaces;
-using RedStarter.Business.DataContract.Contact.Interfaces;
-using RedStarter.Business.DataContract.Product;
-using RedStarter.Business.Managers.Authorization;
-using RedStarter.Business.Managers.Contact;
-using RedStarter.Business.Product;
-using RedStarter.Database.Authorization;
-using RedStarter.Database.Contact;
-using RedStarter.Database.Contexts;
-using RedStarter.Database.DataContract.Application;
-using RedStarter.Database.DataContract.Authorization.Interfaces;
-using RedStarter.Database.DataContract.Product;
-using RedStarter.Database.DataContract.Roles.Interfaces;
-using RedStarter.Database.Entities.People;
-using RedStarter.Database.Entities.Roles;
-using RedStarter.Database.Product;
-using RedStarter.Database.Roles;
-using RedStarter.Database.SeedData;
+using PrimePaper.API.MappingProfiles;
+using PrimePaper.Business.DataContract.Authorization.Interfaces;
+using PrimePaper.Business.DataContract.Contact.Interfaces;
+using PrimePaper.Business.DataContract.Product;
+using PrimePaper.Business.Managers.Authorization;
+using PrimePaper.Business.Managers.Contact;
+using PrimePaper.Business.Product;
+using PrimePaper.Database.Authorization;
+using PrimePaper.Database.Contact;
+using PrimePaper.Database.Contexts;
+using PrimePaper.Database.DataContract.Application;
+using PrimePaper.Database.DataContract.Authorization.Interfaces;
+using PrimePaper.Database.DataContract.Product;
+using PrimePaper.Database.DataContract.Roles.Interfaces;
+using PrimePaper.Database.Entities.People;
+using PrimePaper.Database.Entities.Roles;
+using PrimePaper.Database.Product;
+using PrimePaper.Database.Roles;
+using PrimePaper.Database.SeedData;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Net;
 using System.Text;
 
-namespace RedStarter.API
+namespace PrimePaper.API
 {
     public class Startup
     {

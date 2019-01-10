@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SIS.API.DataContract\RedStarter.API.DataContract.csproj" />
-    <ProjectReference Include="..\SIS.Business.DataContract\RedStarter.Business.DataContract.csproj" />
-    <ProjectReference Include="..\SIS.Database.DataContract\RedStarter.Database.DataContract.csproj" />
-    <ProjectReference Include="..\SIS.Database\RedStarter.Database.csproj" />
+    <ProjectReference Include="..\SIS.API.DataContract\PrimePaper.API.DataContract.csproj" />
+    <ProjectReference Include="..\SIS.Business.DataContract\PrimePaper.Business.DataContract.csproj" />
+    <ProjectReference Include="..\SIS.Database.DataContract\PrimePaper.Database.DataContract.csproj" />
+    <ProjectReference Include="..\SIS.Database\PrimePaper.Database.csproj" />
   </ItemGroup>
 
   <ItemGroup>

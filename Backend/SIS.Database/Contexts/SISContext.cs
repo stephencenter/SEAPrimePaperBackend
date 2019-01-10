@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RedStarter.Database.Entities.Application;
-using RedStarter.Database.Entities.People;
-using RedStarter.Database.Entities.Product;
-using RedStarter.Database.Entities.Roles;
+using PrimePaper.Database.Entities.Application;
+using PrimePaper.Database.Entities.People;
+using PrimePaper.Database.Entities.Product;
+using PrimePaper.Database.Entities.Roles;
 
-namespace RedStarter.Database.Contexts
+namespace PrimePaper.Database.Contexts
 {
     public class SISContext : IdentityDbContext
         <UserEntity, 

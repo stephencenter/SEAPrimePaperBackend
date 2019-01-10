@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.API.DataContract.Authorization
+namespace PrimePaper.API.DataContract.Authorization
 {
     public class AppSettings
     {

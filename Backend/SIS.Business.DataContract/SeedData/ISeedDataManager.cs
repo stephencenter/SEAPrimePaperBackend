@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.SeedData
+namespace PrimePaper.Business.DataContract.SeedData
 {
     public interface ISeedDataManager
     {

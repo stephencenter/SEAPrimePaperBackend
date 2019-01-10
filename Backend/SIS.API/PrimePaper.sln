@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.API", "RedStarter.API.csproj", "{B39D16AE-FE91-4255-B0E8-9F61FADD4573}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.API", "PrimePaper.API.csproj", "{B39D16AE-FE91-4255-B0E8-9F61FADD4573}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.API.DataContract", "..\SIS.API.DataContract\RedStarter.API.DataContract.csproj", "{3F1DBCAA-F8A5-4A33-A1C2-DBC65C56A0A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.API.DataContract", "..\SIS.API.DataContract\PrimePaper.API.DataContract.csproj", "{3F1DBCAA-F8A5-4A33-A1C2-DBC65C56A0A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Business", "..\SIS.Business\RedStarter.Business.csproj", "{2875EA95-4B1D-4D6B-AE3F-4CD13F754C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Business", "..\SIS.Business\PrimePaper.Business.csproj", "{2875EA95-4B1D-4D6B-AE3F-4CD13F754C5A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Business.DataContract", "..\SIS.Business.DataContract\RedStarter.Business.DataContract.csproj", "{C05DBB98-C5B4-48D5-9E14-E87247BABF62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Business.DataContract", "..\SIS.Business.DataContract\PrimePaper.Business.DataContract.csproj", "{C05DBB98-C5B4-48D5-9E14-E87247BABF62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Business.Tests", "..\SIS.Business.Tests\RedStarter.Business.Tests.csproj", "{F1A52235-028F-4A72-AA99-78D28E31F94F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Business.Tests", "..\SIS.Business.Tests\PrimePaper.Business.Tests.csproj", "{F1A52235-028F-4A72-AA99-78D28E31F94F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Database", "..\SIS.Database\RedStarter.Database.csproj", "{9E226C04-85E3-4659-ABF8-1025693DAFA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Database", "..\SIS.Database\PrimePaper.Database.csproj", "{9E226C04-85E3-4659-ABF8-1025693DAFA9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Database.DataContract", "..\SIS.Database.DataContract\RedStarter.Database.DataContract.csproj", "{AD433900-E0B5-42B6-A47D-09105189EB81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Database.DataContract", "..\SIS.Database.DataContract\PrimePaper.Database.DataContract.csproj", "{AD433900-E0B5-42B6-A47D-09105189EB81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.Database.Tests", "..\SIS.Database.Tests\RedStarter.Database.Tests.csproj", "{59681480-8B8E-4749-8024-136334951D20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.Database.Tests", "..\SIS.Database.Tests\PrimePaper.Database.Tests.csproj", "{59681480-8B8E-4749-8024-136334951D20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedStarter.API.UnitTests", "..\SIS.API.UnitTests\RedStarter.API.UnitTests.csproj", "{0236B014-E1E5-4C6B-86E4-3DC1AF53D8B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimePaper.API.UnitTests", "..\SIS.API.UnitTests\PrimePaper.API.UnitTests.csproj", "{0236B014-E1E5-4C6B-86E4-3DC1AF53D8B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

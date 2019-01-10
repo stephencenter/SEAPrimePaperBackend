@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using RedStarter.API.DataContract.Product;
-using RedStarter.Business.DataContract.Product;
-using RedStarter.Database.DataContract.Product;
-using RedStarter.Database.Entities.Product;
+using PrimePaper.API.DataContract.Product;
+using PrimePaper.Business.DataContract.Product;
+using PrimePaper.Database.DataContract.Product;
+using PrimePaper.Database.Entities.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RedStarter.API.MappingProfiles
+namespace PrimePaper.API.MappingProfiles
 {
     public class ProductMappingProfile : Profile
     {

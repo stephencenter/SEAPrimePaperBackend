@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedStarter.Business.DataContract.Product
+namespace PrimePaper.Business.DataContract.Product
 {
     public interface IProductManager
     {

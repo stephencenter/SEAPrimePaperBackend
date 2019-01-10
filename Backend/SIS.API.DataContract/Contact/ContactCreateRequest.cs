@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RedStarter.API.DataContract.Contact
+namespace PrimePaper.API.DataContract.Contact
 {
     public class ContactCreateRequest
     {

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RedStarter.API.DataContract.Product;
-using RedStarter.Business.DataContract.Product;
+using PrimePaper.API.DataContract.Product;
+using PrimePaper.Business.DataContract.Product;
 
-namespace RedStarter.API.Controllers.Product
+namespace PrimePaper.API.Controllers.Product
 {
     [AllowAnonymous]
     [Route("api/[controller]")]
