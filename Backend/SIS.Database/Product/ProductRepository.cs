@@ -44,8 +44,7 @@ namespace RedStarter.Database.Product
 
         public async Task<ProductGetListItemRAO> GetProductById(int id)
         {
-            var query =  _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
-
+            var query = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
             var rao = _mapper.Map<ProductGetListItemRAO>(query);
 
             return rao;
@@ -59,6 +58,12 @@ namespace RedStarter.Database.Product
 
             return rao;
 
+        }
+
+        public async Task<bool> DeleteProduct(int id)
+        {
+            _context.ProductTableAccess.Remove(_context.ProductTableAccess.Single(x => x.ProductEntityId == id));
+            return await _context.SaveChangesAsync() == 1;
         }
     }
 }
