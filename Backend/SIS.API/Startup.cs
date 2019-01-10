@@ -98,7 +98,7 @@ namespace RedStarter.API
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
-                mc.AddProfile(new ApplicationMappingProfile());
+                mc.AddProfile(new ContactMappingProfile());
                 mc.AddProfile(new ProductMappingProfile());
             });
 
@@ -110,8 +110,8 @@ namespace RedStarter.API
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IApplicationRepository, ApplicationRepository>();
-            services.AddScoped<IUserApplicationManager, UserApplicationManager>();
+            services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IContactManager, ContactManager>();
             services.AddScoped<IProductManager, ProductManager>();
             services.AddScoped<IProductRepository, ProductRepository>();
 

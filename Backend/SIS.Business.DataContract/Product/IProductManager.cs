@@ -9,5 +9,7 @@ namespace RedStarter.Business.DataContract.Product
     {
         Task<bool> CreateProduct(ProductCreateDTO dto);
         Task<bool> EditProduct(ProductEditDTO dto);
+        Task<IEnumerable<ProductGetListItemDTO>> GetProducts(); //preexisting so no 
+        Task<ProductGetListItemDTO> GetProductById(int id);
     }
 }
