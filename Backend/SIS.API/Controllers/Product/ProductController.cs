@@ -103,8 +103,6 @@ namespace RedStarter.API.Controllers.Product
                 return StatusCode(400);
             }
 
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
             var dto = await _manager.GetProductById(id);
             var response = _mapper.Map<ProductResponse>(dto);
 
