@@ -23,11 +23,8 @@ namespace RedStarter.Database.Contexts
 
         public DbSet<ProductEntity> ProductTableAccess { get; set; }
         public DbSet<UserEntity> UserTableAccess { get; set; }
-        public DbSet<ApplicationEntity> ApplicationTableAccess { get; set; }
         public DbSet<ContactEntity> ContactTableAccess { get; set; }
-        //public DbSet<DemographicEntity> DemographicTableAccess { get; set; }
-        //public DbSet<EducationEntity> EducationTableAccess { get; set; }
-        //public DbSet<ExperienceEntity> ExperienceTableAccess { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

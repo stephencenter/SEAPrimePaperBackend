@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using RedStarter.Business.DataContract.Application.DTOs;
 using RedStarter.Business.DataContract.Application.Interfaces;
+using RedStarter.Business.DataContract.Contact;
 using RedStarter.Database.DataContract.Application;
 using RedStarter.Database.DataContract.Authorization.Interfaces;
 using RedStarter.Database.DataContract.Roles.Interfaces;
@@ -9,35 +10,33 @@ using System.Threading.Tasks;
 
 namespace RedStarter.Business.Managers.Application
 {
-    public class UserApplicationManager : IUserApplicationManager
+    public class ContactManager : IContactManager
     {
         private readonly IMapper _mapper;
-        private readonly IApplicationRepository _applicationRepository;
         private readonly IAuthRepository _authRepository;
         private readonly IRoleRepository _roleRepository;
+        private readonly IContactRepository _contactRepository;
 
-        public UserApplicationManager(IMapper mapper, IApplicationRepository applicationRepository, IAuthRepository authRepository, IRoleRepository roleRepository)
+        public ContactManager(IMapper mapper,IContactRepository contactRepository, IAuthRepository authRepository, IRoleRepository roleRepository)
         {
-            _applicationRepository = applicationRepository;
+            _contactRepository = contactRepository;
             _mapper = mapper;
             _authRepository = authRepository;
             _roleRepository = roleRepository;
         }
 
-        public async Task<bool> CreateApplication(ApplicationCreateDTO applicationDTO)
+        public async Task<bool> ContactCreate(ContactCreateDTO DTO)
         {
-            var user = await _authRepository.GetUserById(applicationDTO.OwnerId);
+            var user = await _authRepository.GetUserById(DTO.OwnerId);
 
-            if (applicationDTO.OwnerId != user.Id)
+            if (DTO.OwnerId != user.Id)
                 throw new Exception("Unauthorized"); //TODO: Adjustments
 
-            var rao = _mapper.Map<ApplicationCreateRAO>(applicationDTO);
+            var rao = _mapper.Map<ContactCreateRAO>(DTO);
 
-            rao.OwnerId = applicationDTO.OwnerId;
+            rao.OwnerId = DTO.OwnerId;
 
-            Guid ApplicationGuid = Guid.NewGuid();
-            
-            if (await _applicationRepository.CreateApplication(rao, ApplicationGuid))
+            if (await _contactRepository.CreateContact(rao))
             {
                 await _roleRepository.AddUserToRole(user, "user");
                 return true;
@@ -47,6 +46,18 @@ namespace RedStarter.Business.Managers.Application
                 return false;
             }
               
+        }
+
+        public async Task<bool> EditContact(ContactEditDTO dto)
+        {
+            var rao = _mapper.Map<ContactEditRAO>(dto);
+
+            if (await _contactRepository.EditContact(rao))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

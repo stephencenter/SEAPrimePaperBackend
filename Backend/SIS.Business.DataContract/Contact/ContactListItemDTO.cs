@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Database.DataContract.Application
+namespace RedStarter.Business.DataContract.Contact
 {
-    public class ApplicationListItemRAO
+   public class ContactListItemDTO
     {
-        public Guid ApplicationEntityId { get; set; }
+        public int ContactEntityId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.API.DataContract.Application
+namespace RedStarter.API.DataContract.Contact
 {
-    public class ContactCreateRequest
+   public class ContactEditRequest
     {
+        public int ContactEntityId { get; set; }
+        public string CompanyName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public string StreetAddress { get; set; }

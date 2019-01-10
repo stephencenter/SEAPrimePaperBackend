@@ -10,19 +10,19 @@ namespace RedStarter.API.Controllers.Application
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ApplicationController : ControllerBase
+    public class ContactController : ControllerBase
     {
-        private readonly IUserApplicationManager _applicationCreateManager;
+        private readonly IContactManager _contactCreateManager;
         private readonly IMapper _mapper;
 
-        public ApplicationController(IUserApplicationManager applicationCreateManager, IMapper mapper)
+        public ContactController(IContactManager contactCreateManager, IMapper mapper)
         {
-            _applicationCreateManager = applicationCreateManager;
+            _contactCreateManager = contactCreateManager;
             _mapper = mapper;
         }
 
         [HttpPost] 
-        public async Task<IActionResult> PostApplication(ApplicationCreateRequest applicationCreateRequest)
+        public async Task<IActionResult> PostContact(ContactCreateRequest contactCreateRequest)
         {
             if (!ModelState.IsValid)
             {
@@ -30,10 +30,10 @@ namespace RedStarter.API.Controllers.Application
             }
             var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
 
-            var dto = _mapper.Map<ApplicationCreateDTO>(applicationCreateRequest);
+            var dto = _mapper.Map<ContactCreateDTO>(contactCreateRequest);
             dto.OwnerId = identityClaimNum;
 
-            var created = await _applicationCreateManager.CreateApplication(dto);
+            var created = await _contactCreateManager.ContactCreate(dto);
 
             if (created)
                 return StatusCode(201); //TODO: Return URL of new resource

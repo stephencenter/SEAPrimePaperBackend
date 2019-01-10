@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace RedStarter.Database.Entities.Application
+namespace RedStarter.Database.DataContract.Application
 {
-    public class ContactEntity
+  public class ContactEditRAO
     {
-        [Key]
-        public Guid ApplicationEntityId { get; set; }
+        public int ContactEntityId { get; set; }
+        public string CompanyName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
         public string StreetAddress { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
+        public DateTimeOffset DateCreated { get; set; }
     }
 }
