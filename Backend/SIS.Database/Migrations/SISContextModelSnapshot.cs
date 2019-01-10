@@ -196,8 +196,6 @@ namespace RedStarter.Database.Migrations
                     b.Property<string>("Description")
                         .IsRequired();
 
-                    b.Property<int>("OwnerId");
-
                     b.Property<double>("Price");
 
                     b.Property<string>("ProductName")

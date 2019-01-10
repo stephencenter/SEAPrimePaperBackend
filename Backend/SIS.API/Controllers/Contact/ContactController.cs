@@ -28,14 +28,12 @@ namespace RedStarter.API.Controllers.Contact
             {
                 return StatusCode(400);
             }
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
 
+            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
             var dto = _mapper.Map<ContactCreateDTO>(contactCreateRequest);
             dto.OwnerId = identityClaimNum;
 
-            var created = await _contactCreateManager.ContactCreate(dto);
-
-            if (created)
+            if (await _contactCreateManager.ContactCreate(dto))
                 return StatusCode(201); //TODO: Return URL of new resource
 
             return StatusCode(500);
