@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using RedStarter.Business.DataContract.Application.DTOs;
-using RedStarter.Business.DataContract.Application.Interfaces;
 using RedStarter.Business.DataContract.Contact;
+using RedStarter.Business.DataContract.Contact.DTOs;
+using RedStarter.Business.DataContract.Contact.Interfaces;
 using RedStarter.Database.DataContract.Application;
 using RedStarter.Database.DataContract.Authorization.Interfaces;
 using RedStarter.Database.DataContract.Roles.Interfaces;
 using System;
 using System.Threading.Tasks;
 
-namespace RedStarter.Business.Managers.Application
+namespace RedStarter.Business.Managers.Contact
 {
     public class ContactManager : IContactManager
     {

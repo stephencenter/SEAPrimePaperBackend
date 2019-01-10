@@ -89,96 +89,48 @@ namespace RedStarter.Database.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.ApplicationEntity", b =>
+            modelBuilder.Entity("RedStarter.Database.Entities.Application.ContactEntity", b =>
                 {
-                    b.Property<Guid>("ApplicationEntityId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("ContactEntityId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City")
+                        .IsRequired();
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired();
 
                     b.Property<DateTimeOffset>("DateCreated");
 
                     b.Property<DateTimeOffset?>("DateModified");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("Email")
+                        .IsRequired();
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("FirstName")
+                        .IsRequired();
+
+                    b.Property<string>("LastName")
+                        .IsRequired();
 
                     b.Property<int>("OwnerId");
 
-                    b.HasKey("ApplicationEntityId");
+                    b.Property<string>("Phone")
+                        .IsRequired();
 
-                    b.ToTable("ApplicationTableAccess");
-                });
+                    b.Property<string>("State")
+                        .IsRequired();
 
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.ContactEntity", b =>
-                {
-                    b.Property<Guid>("ApplicationEntityId")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("StreetAddress")
+                        .IsRequired();
 
-                    b.Property<string>("City");
+                    b.Property<string>("Zip")
+                        .IsRequired();
 
-                    b.Property<string>("CompanyName");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Phone");
-
-                    b.Property<string>("State");
-
-                    b.Property<string>("StreetAddress");
-
-                    b.Property<string>("Zip");
-
-                    b.HasKey("ApplicationEntityId");
+                    b.HasKey("ContactEntityId");
 
                     b.ToTable("ContactTableAccess");
-                });
-
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.DemographicEntity", b =>
-                {
-                    b.Property<Guid>("ApplicationEntityId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Ethnicity");
-
-                    b.Property<string>("Gender");
-
-                    b.Property<bool>("Married");
-
-                    b.HasKey("ApplicationEntityId");
-
-                    b.ToTable("DemographicTableAccess");
-                });
-
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.EducationEntity", b =>
-                {
-                    b.Property<Guid>("ApplicationEntityId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("CollegeGraduationInfo");
-
-                    b.Property<bool>("CurrentlyEnrolled");
-
-                    b.Property<string>("FieldOfStudy");
-
-                    b.Property<string>("HighSchoolGraduationInfo");
-
-                    b.HasKey("ApplicationEntityId");
-
-                    b.ToTable("EducationTableAccess");
-                });
-
-            modelBuilder.Entity("RedStarter.Database.Entities.Application.ExperienceEntity", b =>
-                {
-                    b.Property<Guid>("ApplicationEntityId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("EmploymentStatus");
-
-                    b.Property<string>("IncomeLevel");
-
-                    b.HasKey("ApplicationEntityId");
-
-                    b.ToTable("ExperienceTableAccess");
                 });
 
             modelBuilder.Entity("RedStarter.Database.Entities.People.UserEntity", b =>

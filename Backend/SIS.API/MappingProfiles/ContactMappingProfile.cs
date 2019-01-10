@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using RedStarter.API.DataContract.Application;
 using RedStarter.API.DataContract.Contact;
-using RedStarter.Business.DataContract.Application.DTOs;
 using RedStarter.Business.DataContract.Contact;
+using RedStarter.Business.DataContract.Contact.DTOs;
 using RedStarter.Database.DataContract.Application;
 using RedStarter.Database.Entities.Application;
 
