@@ -58,5 +58,15 @@ namespace RedStarter.Business.Product
 
             return dto;
         }
+
+        public async Task<bool> DeleteProduct(int id)
+        {
+            if (await _repository.DeleteProduct(id))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
