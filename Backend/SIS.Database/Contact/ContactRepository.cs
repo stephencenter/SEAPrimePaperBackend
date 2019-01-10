@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedStarter.Database.Application
+namespace RedStarter.Database.Contact
 {
     public class ContactRepository : IContactRepository
     {
@@ -28,7 +28,6 @@ namespace RedStarter.Database.Application
         public async Task<bool> CreateContact(ContactCreateRAO rao)
         {
             var entity = _mapper.Map<ContactEntity>(rao);
-
             await _context.ContactTableAccess.AddAsync(entity);
 
             return await _context.SaveChangesAsync() == 1;

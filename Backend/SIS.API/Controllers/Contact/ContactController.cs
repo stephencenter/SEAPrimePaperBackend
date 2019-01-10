@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using RedStarter.API.DataContract.Application;
-using RedStarter.Business.DataContract.Application.DTOs;
-using RedStarter.Business.DataContract.Application.Interfaces;
+using RedStarter.API.DataContract.Contact;
+using RedStarter.Business.DataContract.Contact.DTOs;
+using RedStarter.Business.DataContract.Contact.Interfaces;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace RedStarter.API.Controllers.Application
+namespace RedStarter.API.Controllers.Contact
 {
     [Route("api/[controller]")]
     [ApiController]

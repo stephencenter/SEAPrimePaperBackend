@@ -1,11 +1,11 @@
-﻿using RedStarter.Business.DataContract.Application.DTOs;
-using RedStarter.Business.DataContract.Contact;
+﻿using RedStarter.Business.DataContract.Contact;
+using RedStarter.Business.DataContract.Contact.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedStarter.Business.DataContract.Application.Interfaces
+namespace RedStarter.Business.DataContract.Contact.Interfaces
 {
     public interface IContactManager
     {
