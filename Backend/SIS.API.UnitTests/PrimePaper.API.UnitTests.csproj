@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SIS.API\RedStarter.API.csproj" />
-    <ProjectReference Include="..\SIS.Business.DataContract\RedStarter.Business.DataContract.csproj" />
+    <ProjectReference Include="..\SIS.API\PrimePaper.API.csproj" />
+    <ProjectReference Include="..\SIS.Business.DataContract\PrimePaper.Business.DataContract.csproj" />
   </ItemGroup>
 
   <ItemGroup>

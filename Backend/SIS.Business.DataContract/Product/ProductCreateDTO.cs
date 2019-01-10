@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.Product
+namespace PrimePaper.Business.DataContract.Product
 {
     public class ProductCreateDTO
     {

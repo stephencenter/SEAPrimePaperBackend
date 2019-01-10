@@ -13,14 +13,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using RedStarter.API.DataContract.Authorization;
-using RedStarter.Business.DataContract.Authorization;
-using RedStarter.Business.DataContract.Authorization.DTOs;
-using RedStarter.Business.DataContract.Authorization.Interfaces;
-using RedStarter.Database.DataContract.Authorization.RAOs;
-using RedStarter.Database.Entities.People;
+using PrimePaper.API.DataContract.Authorization;
+using PrimePaper.Business.DataContract.Authorization;
+using PrimePaper.Business.DataContract.Authorization.DTOs;
+using PrimePaper.Business.DataContract.Authorization.Interfaces;
+using PrimePaper.Database.DataContract.Authorization.RAOs;
+using PrimePaper.Database.Entities.People;
 
-namespace RedStarter.API.Controllers.Authorization
+namespace PrimePaper.API.Controllers.Authorization
 {
     [AllowAnonymous]
     [Route("api/[controller]")]

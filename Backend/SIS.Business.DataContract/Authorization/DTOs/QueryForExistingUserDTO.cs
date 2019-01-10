@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.Authorization.DTOs
+namespace PrimePaper.Business.DataContract.Authorization.DTOs
 {
     public class QueryForExistingUserDTO
     {

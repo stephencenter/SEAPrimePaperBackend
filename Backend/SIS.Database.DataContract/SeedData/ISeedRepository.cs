@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Database.DataContract.SeedData
+namespace PrimePaper.Database.DataContract.SeedData
 {
     public interface ISeedRepository
     {

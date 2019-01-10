@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RedStarter.Database.Contexts;
+using PrimePaper.Database.Contexts;
 
-namespace RedStarter.Database.Migrations
+namespace PrimePaper.Database.Migrations
 {
     [DbContext(typeof(SISContext))]
     partial class SISContextModelSnapshot : ModelSnapshot

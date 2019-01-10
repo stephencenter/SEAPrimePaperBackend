@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RedStarter.Database.Migrations
+namespace PrimePaper.Database.Migrations
 {
     public partial class producttableadded : Migration
     {

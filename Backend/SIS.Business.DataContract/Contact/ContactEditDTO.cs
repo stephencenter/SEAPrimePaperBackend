@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RedStarter.Business.DataContract.Contact
+namespace PrimePaper.Business.DataContract.Contact
 {
     public class ContactEditDTO
     {

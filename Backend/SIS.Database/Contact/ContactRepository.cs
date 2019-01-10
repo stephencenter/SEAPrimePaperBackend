@@ -1,17 +1,17 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using RedStarter.Database.Contexts;
-using RedStarter.Database.DataContract.Application;
-using RedStarter.Database.Entities.Application;
-using RedStarter.Database.Entities.People;
+using PrimePaper.Database.Contexts;
+using PrimePaper.Database.DataContract.Application;
+using PrimePaper.Database.Entities.Application;
+using PrimePaper.Database.Entities.People;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedStarter.Database.Contact
+namespace PrimePaper.Database.Contact
 {
     public class ContactRepository : IContactRepository
     {
