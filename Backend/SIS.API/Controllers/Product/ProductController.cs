@@ -11,7 +11,8 @@ using RedStarter.Business.DataContract.Product;
 
 namespace RedStarter.API.Controllers.Product
 {
-    [Route("api/Product/")]
+    [AllowAnonymous]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProductController : Controller
     {
@@ -28,18 +29,13 @@ namespace RedStarter.API.Controllers.Product
         // [Authorize(Roles ="Admin")]
         public async Task<IActionResult> CreateProduct(ProductCreateRequest request)
         {
-
             if (!ModelState.IsValid)
             {
                 return StatusCode(400);
             }
 
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
             var dto = _mapper.Map<ProductCreateDTO>(request);
             dto.DateCreated = DateTime.Now;
-            dto.OwnerId = identityClaimNum;
-
 
             if (await _manager.CreateProduct(dto))
             {
@@ -48,6 +44,43 @@ namespace RedStarter.API.Controllers.Product
 
             throw new Exception();
         }
+
+        [HttpPut]
+        // [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> EditProduct(ProductEditRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            var dto = _mapper.Map<ProductEditDTO>(request);
+
+            if (await _manager.EditProduct(dto))
+            {
+                return StatusCode(201);
+            }
+
+            throw new Exception();
+        }
+
+        [HttpDelete("{id}")]
+        // [Authorize(Roles ="Admin")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            if (await _manager.DeleteProduct(id))
+            {
+                return StatusCode(201);
+            }
+
+            throw new Exception();
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
@@ -56,13 +89,10 @@ namespace RedStarter.API.Controllers.Product
                 return StatusCode(400);
             }
 
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
             var dto = await _manager.GetProducts();
             var response = _mapper.Map<IEnumerable<ProductResponse>>(dto);
 
             return Ok(response); //TODO : Handle exceptions
-
         }
 
         [HttpGet("{id}")]
@@ -79,27 +109,6 @@ namespace RedStarter.API.Controllers.Product
             var response = _mapper.Map<ProductResponse>(dto);
 
             return Ok(response); //TODO : Handle exceptions
-
-        }
-
-        [HttpPut]
-        // [Authorize(Roles ="Admin")]
-        public async Task<IActionResult> EditProduct(ProductEditRequest request)
-        {
-            if (!ModelState.IsValid)
-            {
-                return StatusCode(400);
-            }
-
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-            var dto = _mapper.Map<ProductEditDTO>(request);
-
-            if (await _manager.EditProduct(dto))
-            {
-                return StatusCode(201);
-            }
-
-            throw new Exception();
         }
     }
 }
