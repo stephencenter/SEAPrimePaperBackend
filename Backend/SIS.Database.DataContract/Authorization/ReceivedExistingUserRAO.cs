@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PrimePaper.Database.DataContract.Authorization.RAOs
+namespace PrimePaper.Database.DataContract.Authorization
 {
     public class ReceivedExistingUserRAO
     {

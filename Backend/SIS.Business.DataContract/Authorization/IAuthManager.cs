@@ -1,10 +1,6 @@
-﻿using PrimePaper.Business.DataContract.Authorization.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace PrimePaper.Business.DataContract.Authorization.Interfaces
+namespace PrimePaper.Business.DataContract.Authorization
 {
     public interface IAuthManager
     {

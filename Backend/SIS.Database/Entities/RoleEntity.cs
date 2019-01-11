@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PrimePaper.Database.Entities.Roles
+namespace PrimePaper.Database.Entities
 {
     public class RoleEntity : IdentityRole<int>
     {

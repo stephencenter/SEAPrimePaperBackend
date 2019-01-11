@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PrimePaper.Business.SeedData
+namespace PrimePaper.Business.Managers
 {
     public class SeedDataManager : ISeedDataManager
     {

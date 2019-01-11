@@ -5,7 +5,7 @@ using PrimePaper.Business.DataContract.Cart;
 using System;
 using System.Threading.Tasks;
 
-namespace PrimePaper.API.Controllers.Cart
+namespace PrimePaper.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

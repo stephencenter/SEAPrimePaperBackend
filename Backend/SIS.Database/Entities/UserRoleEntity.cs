@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using PrimePaper.Database.Entities.People;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace PrimePaper.Database.Entities.Roles
+namespace PrimePaper.Database.Entities
 {
     public class UserRoleEntity : IdentityUserRole<int>
     {

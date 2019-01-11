@@ -1,15 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using PrimePaper.Database.DataContract.Authorization.RAOs;
-using PrimePaper.Database.DataContract.Roles.Interfaces;
-using PrimePaper.Database.Entities.People;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using PrimePaper.Database.DataContract.Authorization;
+using PrimePaper.Database.DataContract.Roles;
+using PrimePaper.Database.Entities;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Database.Roles
+namespace PrimePaper.Database.Repositories
 {
     public class RoleRepository : IRoleRepository
     {

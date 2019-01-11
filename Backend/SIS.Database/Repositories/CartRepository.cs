@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Cart;
-using PrimePaper.Database.Entities.Cart;
+using PrimePaper.Database.Entities;
 using System.Linq;
 using System.Threading.Tasks;
 

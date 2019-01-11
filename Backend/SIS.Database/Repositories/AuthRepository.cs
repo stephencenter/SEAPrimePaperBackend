@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PrimePaper.Database.Contexts;
-using PrimePaper.Database.DataContract.Authorization.Interfaces;
-using PrimePaper.Database.DataContract.Authorization.RAOs;
-using PrimePaper.Database.Entities.People;
+using PrimePaper.Database.DataContract.Authorization;
+using PrimePaper.Database.Entities;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Database.Authorization
+namespace PrimePaper.Database.Repositories
 {
     public class AuthRepository : IAuthRepository
     {
@@ -56,7 +56,8 @@ namespace PrimePaper.Database.Authorization
                 var rao = _mapper.Map<ReceivedExistingUserRAO>(user);
                 return rao;
             }
-            throw new NotImplementedException("User already exists");
+
+            throw new NotImplementedException(result.Errors.FirstOrDefault().Description);
         }
 
         public async Task<bool> UserExists(string username)

@@ -3,12 +3,12 @@ using PrimePaper.Business.DataContract.Contact;
 using PrimePaper.Business.DataContract.Contact.DTOs;
 using PrimePaper.Business.DataContract.Contact.Interfaces;
 using PrimePaper.Database.DataContract.Application;
-using PrimePaper.Database.DataContract.Authorization.Interfaces;
-using PrimePaper.Database.DataContract.Roles.Interfaces;
+using PrimePaper.Database.DataContract.Authorization;
+using PrimePaper.Database.DataContract.Roles;
 using System;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Business.Managers.Contact
+namespace PrimePaper.Business.Managers
 {
     public class ContactManager : IContactManager
     {

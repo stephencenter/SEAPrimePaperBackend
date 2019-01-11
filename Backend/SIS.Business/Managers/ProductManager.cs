@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Business.Product
+namespace PrimePaper.Business.Managers
 {
     public class ProductManager : IProductManager
     {

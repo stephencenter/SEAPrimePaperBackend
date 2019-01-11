@@ -1,10 +1,6 @@
-﻿using PrimePaper.Database.DataContract.Authorization.RAOs;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace PrimePaper.Database.DataContract.Authorization.Interfaces
+namespace PrimePaper.Database.DataContract.Authorization
 {
     public interface IAuthRepository
     {

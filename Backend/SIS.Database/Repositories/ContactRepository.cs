@@ -3,21 +3,16 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Application;
-using PrimePaper.Database.Entities.Application;
-using PrimePaper.Database.Entities.People;
-using System;
+using PrimePaper.Database.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Database.Contact
+namespace PrimePaper.Database.Repositories
 {
     public class ContactRepository : IContactRepository
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;
-        private readonly UserManager<UserEntity> _userManager;
 
         public ContactRepository(SISContext context, IMapper mapper)
         {

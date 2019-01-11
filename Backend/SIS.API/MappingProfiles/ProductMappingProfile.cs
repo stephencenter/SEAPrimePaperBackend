@@ -2,7 +2,7 @@
 using PrimePaper.API.DataContract.Product;
 using PrimePaper.Business.DataContract.Product;
 using PrimePaper.Database.DataContract.Product;
-using PrimePaper.Database.Entities.Product;
+using PrimePaper.Database.Entities;
 
 namespace PrimePaper.API.MappingProfiles
 {

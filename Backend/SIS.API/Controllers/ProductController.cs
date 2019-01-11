@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using PrimePaper.API.DataContract.Product;
 using PrimePaper.Business.DataContract.Product;
 
-namespace PrimePaper.API.Controllers.Product
+namespace PrimePaper.API.Controllers
 {
     [AllowAnonymous]
     [Route("api/[controller]")]

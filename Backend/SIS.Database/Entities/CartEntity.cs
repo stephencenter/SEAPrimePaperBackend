@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace PrimePaper.Database.Entities.Cart
+namespace PrimePaper.Database.Entities
 {
     public class CartEntity
     {

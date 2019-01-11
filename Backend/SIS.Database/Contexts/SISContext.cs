@@ -1,23 +1,19 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PrimePaper.Database.Entities.Application;
-using PrimePaper.Database.Entities.Cart;
-using PrimePaper.Database.Entities.People;
-using PrimePaper.Database.Entities.Product;
-using PrimePaper.Database.Entities.Roles;
+using PrimePaper.Database.Entities;
 
 namespace PrimePaper.Database.Contexts
 {
     public class SISContext : IdentityDbContext
         <UserEntity, 
-        RoleEntity, 
-        int, 
-        IdentityUserClaim<int>, 
-        UserRoleEntity, 
-        IdentityUserLogin<int>, 
-        IdentityRoleClaim<int>, 
-        IdentityUserToken<int>>
+         RoleEntity, 
+         int, 
+         IdentityUserClaim<int>, 
+         UserRoleEntity, 
+         IdentityUserLogin<int>, 
+         IdentityRoleClaim<int>, 
+         IdentityUserToken<int>>
     {
         public SISContext(DbContextOptions<SISContext> options) : base(options) { }
 

@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Configuration;
-using PrimePaper.Business.DataContract.Authorization.DTOs;
-using PrimePaper.Business.DataContract.Authorization.Interfaces;
-using PrimePaper.Database.DataContract.Authorization.Interfaces;
-using PrimePaper.Database.DataContract.Authorization.RAOs;
-using System;
+using PrimePaper.Business.DataContract.Authorization;
+using PrimePaper.Database.DataContract.Authorization;
 using System.Threading.Tasks;
 
-namespace PrimePaper.Business.Managers.Authorization
+namespace PrimePaper.Business.Managers
 {
     public class AuthManager : IAuthManager
     {

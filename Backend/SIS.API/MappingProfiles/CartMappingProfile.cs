@@ -1,7 +1,7 @@
 ﻿using PrimePaper.API.DataContract.Cart;
 using PrimePaper.Business.DataContract.Cart;
 using PrimePaper.Database.DataContract.Cart;
-using PrimePaper.Database.Entities.Cart;
+using PrimePaper.Database.Entities;
 using AutoMapper;
 
 namespace PrimePaper.API.MappingProfiles

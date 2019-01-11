@@ -1,16 +1,13 @@
 ﻿using AutoMapper;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Product;
-using PrimePaper.Database.Entities.Product;
-using System;
+using PrimePaper.Database.Entities;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PrimePaper.Business.DataContract.Product;
 
-namespace PrimePaper.Database.Product
+namespace PrimePaper.Database.Repositories
 {
     public class ProductRepository : IProductRepository
     {

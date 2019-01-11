@@ -15,12 +15,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using PrimePaper.API.DataContract.Authorization;
 using PrimePaper.Business.DataContract.Authorization;
-using PrimePaper.Business.DataContract.Authorization.DTOs;
-using PrimePaper.Business.DataContract.Authorization.Interfaces;
-using PrimePaper.Database.DataContract.Authorization.RAOs;
-using PrimePaper.Database.Entities.People;
+using PrimePaper.Database.Entities;
 
-namespace PrimePaper.API.Controllers.Authorization
+namespace PrimePaper.API.Controllers
 {
     [AllowAnonymous]
     [Route("api/[controller]")]

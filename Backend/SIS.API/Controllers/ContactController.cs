@@ -6,7 +6,7 @@ using PrimePaper.Business.DataContract.Contact.Interfaces;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace PrimePaper.API.Controllers.Contact
+namespace PrimePaper.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
