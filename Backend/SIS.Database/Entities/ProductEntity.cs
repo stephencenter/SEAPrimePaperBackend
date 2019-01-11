@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace PrimePaper.Database.Entities
 {
@@ -21,7 +19,6 @@ namespace PrimePaper.Database.Entities
 
         [Required]
         public int OwnerId { get; set; }
-
 
         [Required]
         public DateTimeOffset DateCreated { get; set; }

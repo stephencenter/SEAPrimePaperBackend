@@ -30,7 +30,7 @@ namespace PrimePaper.API.Controllers
 
             var dto = _mapper.Map<CartCreateDTO>(request);
 
-            if (await _manager.CreateProduct(dto))
+            if (await _manager.CreateCartItem(dto))
             {
                 return StatusCode(201);
             }

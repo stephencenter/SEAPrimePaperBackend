@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Business.Managers
 {
-    public class CartManager
+    public class CartManager : ICartManager
     {
         private readonly IMapper _mapper;
         private readonly ICartRepository _repository;

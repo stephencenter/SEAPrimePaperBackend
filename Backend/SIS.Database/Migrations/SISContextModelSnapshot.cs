@@ -89,7 +89,24 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PrimePaper.Database.Entities.Application.ContactEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.CartEntity", b =>
+                {
+                    b.Property<int>("CartEntityId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OwnerId");
+
+                    b.Property<int>("ProductEntityId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("CartEntityId");
+
+                    b.ToTable("CartTableAccess");
+                });
+
+            modelBuilder.Entity("PrimePaper.Database.Entities.ContactEntity", b =>
                 {
                     b.Property<int>("ContactEntityId")
                         .ValueGeneratedOnAdd()
@@ -133,24 +150,55 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("ContactTableAccess");
                 });
 
-            modelBuilder.Entity("PrimePaper.Database.Entities.Cart.CartEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.ProductEntity", b =>
                 {
-                    b.Property<int>("CartEntityId")
+                    b.Property<int>("ProductEntityId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<Guid>("OwnerId");
+                    b.Property<DateTimeOffset>("DateCreated");
 
-                    b.Property<int>("ProductEntityId");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<int>("Quantity");
+                    b.Property<int>("OwnerId");
 
-                    b.HasKey("CartEntityId");
+                    b.Property<double>("Price");
 
-                    b.ToTable("CartTableAccess");
+                    b.Property<string>("ProductName")
+                        .IsRequired();
+
+                    b.HasKey("ProductEntityId");
+
+                    b.ToTable("ProductTableAccess");
                 });
 
-            modelBuilder.Entity("PrimePaper.Database.Entities.People.UserEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.RoleEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("PrimePaper.Database.Entities.UserEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -202,55 +250,7 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("PrimePaper.Database.Entities.Product.ProductEntity", b =>
-                {
-                    b.Property<int>("ProductEntityId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTimeOffset>("DateCreated");
-
-                    b.Property<string>("Description")
-                        .IsRequired();
-
-                    b.Property<int>("OwnerId");
-
-                    b.Property<double>("Price");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired();
-
-                    b.HasKey("ProductEntityId");
-
-                    b.ToTable("ProductTableAccess");
-                });
-
-            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.RoleEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken();
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256);
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles");
-                });
-
-            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.UserRoleEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.UserRoleEntity", b =>
                 {
                     b.Property<int>("UserId");
 
@@ -265,7 +265,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("PrimePaper.Database.Entities.Roles.RoleEntity")
+                    b.HasOne("PrimePaper.Database.Entities.RoleEntity")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -273,7 +273,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -281,7 +281,7 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -289,20 +289,20 @@ namespace PrimePaper.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity")
+                    b.HasOne("PrimePaper.Database.Entities.UserEntity")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("PrimePaper.Database.Entities.Roles.UserRoleEntity", b =>
+            modelBuilder.Entity("PrimePaper.Database.Entities.UserRoleEntity", b =>
                 {
-                    b.HasOne("PrimePaper.Database.Entities.Roles.RoleEntity", "Role")
+                    b.HasOne("PrimePaper.Database.Entities.RoleEntity", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("PrimePaper.Database.Entities.People.UserEntity", "User")
+                    b.HasOne("PrimePaper.Database.Entities.UserEntity", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

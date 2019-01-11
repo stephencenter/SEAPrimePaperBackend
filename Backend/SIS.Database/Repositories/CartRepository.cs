@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Database.Repositories
 {
-    public class CartRepository
+    public class CartRepository : ICartRepository
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;

@@ -12,7 +12,7 @@ namespace PrimePaper.Database.Entities
         public int ProductEntityId { get; set; }
 
         [Required] // The ID of the User that put this CartEntity in the cart.
-        public Guid OwnerId { get; set; }
+        public int OwnerId { get; set; }
 
         [Required] // The amount of the product you want to purchase
         public int Quantity { get; set; }
