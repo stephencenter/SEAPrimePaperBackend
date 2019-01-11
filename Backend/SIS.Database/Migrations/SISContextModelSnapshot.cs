@@ -133,6 +133,23 @@ namespace PrimePaper.Database.Migrations
                     b.ToTable("ContactTableAccess");
                 });
 
+            modelBuilder.Entity("PrimePaper.Database.Entities.Cart.CartEntity", b =>
+                {
+                    b.Property<int>("CartEntityId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<Guid>("OwnerId");
+
+                    b.Property<int>("ProductEntityId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("CartEntityId");
+
+                    b.ToTable("CartTableAccess");
+                });
+
             modelBuilder.Entity("PrimePaper.Database.Entities.People.UserEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -195,6 +212,8 @@ namespace PrimePaper.Database.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired();
+
+                    b.Property<int>("OwnerId");
 
                     b.Property<double>("Price");
 

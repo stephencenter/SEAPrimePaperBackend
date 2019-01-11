@@ -17,7 +17,7 @@ namespace PrimePaper.API.MappingProfiles
 
             CreateMap<ProductEditRequest, ProductEditDTO>();
             CreateMap<ProductEditDTO, ProductEditRAO>();
-           
+            CreateMap<ProductEditRAO, ProductEntity>();
         }
     }
 }

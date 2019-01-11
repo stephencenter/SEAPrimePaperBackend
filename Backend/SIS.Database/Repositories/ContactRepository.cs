@@ -37,8 +37,8 @@ namespace PrimePaper.Database.Contact
         {
             var entity = _mapper.Map<ContactEntity>(rao);
             _context.ContactTableAccess.Update(entity);
-            return await _context.SaveChangesAsync() == 1;
 
+            return await _context.SaveChangesAsync() == 1;
         }
 
         public async Task<IEnumerable<ContactListItemRAO>> GetAllContacts()

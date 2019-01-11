@@ -19,8 +19,7 @@ namespace PrimePaper.Database.Contexts
         IdentityRoleClaim<int>, 
         IdentityUserToken<int>>
     {
-        public SISContext(DbContextOptions<SISContext> options) 
-            : base(options) { }
+        public SISContext(DbContextOptions<SISContext> options) : base(options) { }
 
         public DbSet<ProductEntity> ProductTableAccess { get; set; }
         public DbSet<CartEntity> CartTableAccess { get; set; }
