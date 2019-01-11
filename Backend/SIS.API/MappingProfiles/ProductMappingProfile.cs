@@ -3,10 +3,6 @@ using PrimePaper.API.DataContract.Product;
 using PrimePaper.Business.DataContract.Product;
 using PrimePaper.Database.DataContract.Product;
 using PrimePaper.Database.Entities.Product;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PrimePaper.API.MappingProfiles
 {
@@ -14,7 +10,7 @@ namespace PrimePaper.API.MappingProfiles
     {
         public ProductMappingProfile()
         {
-            // Product Create Mapping
+            // Product Mapping
             CreateMap<ProductCreateRequest, ProductCreateDTO>();
             CreateMap<ProductCreateDTO, ProductCreateRAO>();
             CreateMap<ProductCreateRAO, ProductEntity>();

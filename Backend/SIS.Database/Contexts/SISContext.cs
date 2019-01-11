@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PrimePaper.Database.Entities.Application;
+using PrimePaper.Database.Entities.Cart;
 using PrimePaper.Database.Entities.People;
 using PrimePaper.Database.Entities.Product;
 using PrimePaper.Database.Entities.Roles;
@@ -22,9 +23,9 @@ namespace PrimePaper.Database.Contexts
             : base(options) { }
 
         public DbSet<ProductEntity> ProductTableAccess { get; set; }
+        public DbSet<CartEntity> CartTableAccess { get; set; }
         public DbSet<UserEntity> UserTableAccess { get; set; }
         public DbSet<ContactEntity> ContactTableAccess { get; set; }
-        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
