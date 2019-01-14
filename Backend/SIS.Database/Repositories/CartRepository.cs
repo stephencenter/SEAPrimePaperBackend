@@ -50,14 +50,23 @@ namespace PrimePaper.Database.Repositories
 
         public async Task<bool> EditCartItem(CartEditRAO rao)
         {
+            // Do not let people edit their cart to an invalid quantity
+            // Future possibility: Lowering quantity to 0 should delete it from the cart
             if (rao.Quantity < 1)
             {
                 return false;
             }
 
+            // Get the entity from the table, modify its quantity (nothing else needs to be changed)
             var entity = _context.CartTableAccess.Single(x => x.CartEntityId == rao.CartEntityId);
             entity.Quantity = rao.Quantity;
 
+            return await _context.SaveChangesAsync() == 1;
+        }
+
+        public async Task<bool> DeleteCartItem(int id)
+        {
+            _context.CartTableAccess.Remove(_context.CartTableAccess.Single(x => x.CartEntityId == id));
             return await _context.SaveChangesAsync() == 1;
         }
     }

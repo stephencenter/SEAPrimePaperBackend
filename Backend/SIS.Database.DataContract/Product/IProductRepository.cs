@@ -10,9 +10,9 @@ namespace PrimePaper.Database.DataContract.Product
     {
         Task<bool> CreateProduct(ProductCreateRAO rao);
         Task<bool> EditProduct(ProductEditRAO rao);
+        Task<bool> DeleteProduct(int id);
         Task<IEnumerable<ProductGetListItemRAO>> GetProducts();
         Task<ProductGetListItemRAO> GetProductById(int id);
-        Task<bool> DeleteProduct(int id);
 
     }
 }

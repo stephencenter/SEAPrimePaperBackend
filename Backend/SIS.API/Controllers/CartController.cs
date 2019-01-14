@@ -58,5 +58,22 @@ namespace PrimePaper.API.Controllers
 
             throw new Exception();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCartItem(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            if (await _manager.DeleteCartItem(id))
+
+            {
+                return StatusCode(201);
+            }
+
+            throw new Exception();
+        }
     }
 }

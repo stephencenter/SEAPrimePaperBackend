@@ -156,8 +156,6 @@ namespace PrimePaper.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTimeOffset>("DateCreated");
-
                     b.Property<string>("Description")
                         .IsRequired();
 
