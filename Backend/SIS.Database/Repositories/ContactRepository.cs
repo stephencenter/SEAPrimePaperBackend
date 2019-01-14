@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Application;
@@ -14,7 +13,6 @@ namespace PrimePaper.Database.Repositories
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;
-        private readonly UserManager<UserEntity> _userManager;
 
         public ContactRepository(SISContext context, IMapper mapper)
         {
