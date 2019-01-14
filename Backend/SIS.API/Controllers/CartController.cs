@@ -40,5 +40,23 @@ namespace PrimePaper.API.Controllers
 
             throw new Exception();
         }
+
+        [HttpPut]
+        public async Task<IActionResult> EditCartItem([FromBody]CartEditRequest request, [FromForm]CartEditRequest request2)
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            var dto = _mapper.Map<CartEditDTO>(request);
+
+            if (await _manager.EditCartItem(dto))
+            {
+                return StatusCode(201);
+            }
+
+            throw new Exception();
+        }
     }
 }

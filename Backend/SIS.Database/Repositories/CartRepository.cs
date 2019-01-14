@@ -4,7 +4,6 @@ using PrimePaper.Database.DataContract.Cart;
 using PrimePaper.Database.Entities;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
 
 namespace PrimePaper.Database.Repositories
 {
@@ -12,7 +11,6 @@ namespace PrimePaper.Database.Repositories
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;
-        private readonly UserManager<UserEntity> _userManager;
 
         public CartRepository(SISContext context, IMapper mapper)
         {
@@ -46,6 +44,19 @@ namespace PrimePaper.Database.Repositories
             {
                 await _context.CartTableAccess.AddAsync(entity);
             }
+
+            return await _context.SaveChangesAsync() == 1;
+        }
+
+        public async Task<bool> EditCartItem(CartEditRAO rao)
+        {
+            if (rao.Quantity < 1)
+            {
+                return false;
+            }
+
+            var entity = _context.CartTableAccess.Single(x => x.CartEntityId == rao.CartEntityId);
+            entity.Quantity = rao.Quantity;
 
             return await _context.SaveChangesAsync() == 1;
         }
