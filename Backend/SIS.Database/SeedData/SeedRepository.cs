@@ -3,8 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 using PrimePaper.Database.DataContract.SeedData;
-using PrimePaper.Database.Entities.People;
-using PrimePaper.Database.Entities.Roles;
+using PrimePaper.Database.Entities;
 
 namespace PrimePaper.Database.SeedData
 {

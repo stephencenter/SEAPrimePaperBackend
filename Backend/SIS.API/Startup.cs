@@ -13,23 +13,19 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using PrimePaper.API.MappingProfiles;
-using PrimePaper.Business.DataContract.Authorization.Interfaces;
+using PrimePaper.Business.DataContract.Authorization;
+using PrimePaper.Business.DataContract.Cart;
 using PrimePaper.Business.DataContract.Contact.Interfaces;
 using PrimePaper.Business.DataContract.Product;
-using PrimePaper.Business.Managers.Authorization;
-using PrimePaper.Business.Managers.Contact;
-using PrimePaper.Business.Product;
-using PrimePaper.Database.Authorization;
-using PrimePaper.Database.Contact;
+using PrimePaper.Business.Managers;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Application;
-using PrimePaper.Database.DataContract.Authorization.Interfaces;
+using PrimePaper.Database.DataContract.Authorization;
+using PrimePaper.Database.DataContract.Cart;
 using PrimePaper.Database.DataContract.Product;
-using PrimePaper.Database.DataContract.Roles.Interfaces;
-using PrimePaper.Database.Entities.People;
-using PrimePaper.Database.Entities.Roles;
-using PrimePaper.Database.Product;
-using PrimePaper.Database.Roles;
+using PrimePaper.Database.DataContract.Roles;
+using PrimePaper.Database.Entities;
+using PrimePaper.Database.Repositories;
 using PrimePaper.Database.SeedData;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Net;
@@ -100,6 +96,7 @@ namespace PrimePaper.API
                 mc.AddProfile(new MappingProfile());
                 mc.AddProfile(new ContactMappingProfile());
                 mc.AddProfile(new ProductMappingProfile());
+                mc.AddProfile(new CartMappingProfile());
             });
 
             IMapper mapper = mappingConfig.CreateMapper();
@@ -110,10 +107,12 @@ namespace PrimePaper.API
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IContactManager, ContactManager>();
+            services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IProductManager, ProductManager>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICartManager, CartManager>();
+            services.AddScoped<ICartRepository, CartRepository>();
 
             //======= Swagger =======
             services.AddSwaggerGen(c =>

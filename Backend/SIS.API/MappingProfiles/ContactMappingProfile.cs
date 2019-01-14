@@ -3,7 +3,7 @@ using PrimePaper.API.DataContract.Contact;
 using PrimePaper.Business.DataContract.Contact;
 using PrimePaper.Business.DataContract.Contact.DTOs;
 using PrimePaper.Database.DataContract.Application;
-using PrimePaper.Database.Entities.Application;
+using PrimePaper.Database.Entities;
 
 namespace PrimePaper.API.MappingProfiles
 {

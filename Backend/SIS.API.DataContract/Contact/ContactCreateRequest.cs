@@ -4,12 +4,8 @@ namespace PrimePaper.API.DataContract.Contact
 {
     public class ContactCreateRequest
     {
-        [Required]
         public string FirstName { get; set; }
-
-        [Required]
         public string LastName { get; set; }
-
         public string CompanyName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }

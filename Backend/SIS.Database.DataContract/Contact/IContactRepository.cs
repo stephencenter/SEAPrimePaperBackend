@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace PrimePaper.Database.DataContract.Application
 {
-  public interface IContactRepository
+    public interface IContactRepository
     {
         Task<bool> CreateContact(ContactCreateRAO rao);
-
         Task<bool> EditContact(ContactEditRAO rao);
+        Task<ContactGetListItemRAO> GetContactById(int id);
 
     }
 }
