@@ -13,8 +13,5 @@ namespace PrimePaper.Business.DataContract.Contact
         public string State { get; set; }
         public string Zip { get; set; }
         public DateTimeOffset DateCreated { get; set; }
-
-
-
     }
 }

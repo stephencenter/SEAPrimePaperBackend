@@ -6,5 +6,6 @@ namespace PrimePaper.Database.DataContract.Cart
     {
         Task<bool> CreateCartItem(CartCreateRAO rao);
         Task<bool> EditCartItem(CartEditRAO rao);
+        Task<bool> DeleteCartItem(int id);
     }
 }

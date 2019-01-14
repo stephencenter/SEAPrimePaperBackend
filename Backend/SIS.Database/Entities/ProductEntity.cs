@@ -19,8 +19,5 @@ namespace PrimePaper.Database.Entities
 
         [Required]
         public int OwnerId { get; set; }
-
-        [Required]
-        public DateTimeOffset DateCreated { get; set; }
     }
 }

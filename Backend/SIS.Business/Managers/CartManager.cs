@@ -43,5 +43,15 @@ namespace PrimePaper.Business.Managers
 
             return false;
         }
+
+        public async Task<bool> DeleteCartItem(int id)
+        {
+            if (await _repository.DeleteCartItem(id))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

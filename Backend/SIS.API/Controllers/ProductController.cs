@@ -33,7 +33,6 @@ namespace PrimePaper.API.Controllers
             }
 
             var dto = _mapper.Map<ProductCreateDTO>(request);
-            dto.DateCreated = DateTime.Now;
 
             if (await _manager.CreateProduct(dto))
             {
@@ -72,6 +71,7 @@ namespace PrimePaper.API.Controllers
             }
 
             if (await _manager.DeleteProduct(id))
+
             {
                 return StatusCode(201);
             }
