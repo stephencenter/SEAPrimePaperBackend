@@ -1,7 +1,4 @@
-﻿using PrimePaper.Database.DataContract.Authorization.RAOs;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PrimePaper.Database.DataContract.Authorization;
 using System.Threading.Tasks;
 
 namespace PrimePaper.Database.DataContract.User

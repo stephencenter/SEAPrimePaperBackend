@@ -10,8 +10,7 @@ namespace PrimePaper.Business.DataContract.Contact.Interfaces
     public interface IContactManager
     {
         Task<bool> ContactCreate(ContactCreateDTO rao);
-
         Task<bool> EditContact(ContactEditDTO dto);
-
+        Task<ContactGetListItemDTO> GetContactById(int id);
     }
 }

@@ -1,8 +1,8 @@
 using AutoMapper;
 using PrimePaper.API.DataContract.Authorization;
-using PrimePaper.Business.DataContract.Authorization.DTOs;
-using PrimePaper.Database.DataContract.Authorization.RAOs;
-using PrimePaper.Database.Entities.People;
+using PrimePaper.Business.DataContract.Authorization;
+using PrimePaper.Database.DataContract.Authorization;
+using PrimePaper.Database.Entities;
 
 namespace PrimePaper.API
 {
