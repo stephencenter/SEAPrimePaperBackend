@@ -59,5 +59,13 @@ namespace PrimePaper.Business.Managers
 
             return false;
         }
+
+        public async Task<ContactGetListItemDTO> GetContactById(int id)
+        {
+            var rao = await _contactRepository.GetContactById(id);
+            var dto = _mapper.Map<ContactGetListItemDTO>(rao);
+
+            return dto;
+        }
     }
 }

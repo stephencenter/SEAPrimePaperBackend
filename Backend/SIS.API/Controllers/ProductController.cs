@@ -45,7 +45,7 @@ namespace PrimePaper.API.Controllers
 
         [HttpPut]
         // [Authorize(Roles ="Admin")]
-        public async Task<IActionResult> EditProduct(ProductEditRequest request)
+        public async Task<IActionResult> EditProduct([FromBody]ProductEditRequest request, [FromForm]ProductEditRequest request2)
         {
             if (!ModelState.IsValid)
             {

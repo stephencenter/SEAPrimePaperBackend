@@ -6,6 +6,7 @@ using PrimePaper.Database.DataContract.Application;
 using PrimePaper.Database.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace PrimePaper.Database.Repositories
 {
@@ -13,6 +14,7 @@ namespace PrimePaper.Database.Repositories
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;
+        private readonly UserManager<UserEntity> _userManager;
 
         public ContactRepository(SISContext context, IMapper mapper)
         {
@@ -36,10 +38,18 @@ namespace PrimePaper.Database.Repositories
             return await _context.SaveChangesAsync() == 1;
         }
 
-        public async Task<IEnumerable<ContactListItemRAO>> GetAllContacts()
+        public async Task<ContactGetListItemRAO> GetContactById(int id)
+        {
+            var query = _context.ContactTableAccess.Single(x => x.ContactEntityId == id);
+            var rao = _mapper.Map<ContactGetListItemRAO>(query);
+
+            return rao;
+        }
+
+        public async Task<IEnumerable<ContactGetListItemRAO>> GetAllContacts()
         {
             var EntityList = await _context.ContactTableAccess.ToArrayAsync();
-            var List = _mapper.Map<IEnumerable<ContactListItemRAO>>(EntityList);
+            var List = _mapper.Map<IEnumerable<ContactGetListItemRAO>>(EntityList);
 
             return List;
         }

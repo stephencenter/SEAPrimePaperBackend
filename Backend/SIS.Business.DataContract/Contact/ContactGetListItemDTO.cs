@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PrimePaper.Database.DataContract.Application
+namespace PrimePaper.Business.DataContract.Contact
 {
-    public class ContactListItemRAO
+    public class ContactGetListItemDTO
     {
         public int ContactEntityId { get; set; }
         public string FirstName { get; set; }
