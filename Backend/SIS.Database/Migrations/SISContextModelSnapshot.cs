@@ -120,8 +120,6 @@ namespace PrimePaper.Database.Migrations
 
                     b.Property<DateTimeOffset>("DateCreated");
 
-                    b.Property<DateTimeOffset?>("DateModified");
-
                     b.Property<string>("Email")
                         .IsRequired();
 
