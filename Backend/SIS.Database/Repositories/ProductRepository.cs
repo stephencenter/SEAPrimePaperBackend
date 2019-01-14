@@ -42,18 +42,18 @@ namespace PrimePaper.Database.Repositories
             return await _context.SaveChangesAsync() == 1;
         }
 
-        public async Task<ProductGetListItemRAO> GetProductById(int id)
+        public async Task<ProductGetRAO> GetProductById(int id)
         {
             var query = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
-            var rao = _mapper.Map<ProductGetListItemRAO>(query);
+            var rao = _mapper.Map<ProductGetRAO>(query);
             
             return rao;
         }
 
-        public async Task<IEnumerable<ProductGetListItemRAO>> GetProducts()
+        public async Task<IEnumerable<ProductGetRAO>> GetProducts()
         {
             var query = await _context.ProductTableAccess.ToArrayAsync();
-            var rao = _mapper.Map<IEnumerable<ProductGetListItemRAO>>(query);
+            var rao = _mapper.Map<IEnumerable<ProductGetRAO>>(query);
 
             return rao;
         }

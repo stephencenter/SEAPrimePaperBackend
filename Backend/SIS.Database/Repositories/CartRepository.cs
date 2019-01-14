@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PrimePaper.Database.Contexts;
 using PrimePaper.Database.DataContract.Cart;
 using PrimePaper.Database.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -68,6 +70,14 @@ namespace PrimePaper.Database.Repositories
         {
             _context.CartTableAccess.Remove(_context.CartTableAccess.Single(x => x.CartEntityId == id));
             return await _context.SaveChangesAsync() == 1;
+        }
+
+        public async Task<IEnumerable<CartGetRAO>> GetCartItems(int user_id)
+        {
+            var query = await _context.CartTableAccess.Where(x => x.OwnerId == user_id).ToArrayAsync();
+            var rao = _mapper.Map<IEnumerable<CartGetRAO>>(query);
+
+            return rao;
         }
     }
 }

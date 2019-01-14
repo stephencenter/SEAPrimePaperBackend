@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PrimePaper.Business.DataContract.Cart
 {
@@ -7,5 +8,6 @@ namespace PrimePaper.Business.DataContract.Cart
         Task<bool> CreateCartItem(CartCreateDTO dto);
         Task<bool> EditCartItem(CartEditDTO dto);
         Task<bool> DeleteCartItem(int id);
+        Task<IEnumerable<CartGetDTO>> GetCartItems(int user_id);
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrimePaper.Business.DataContract.Product
+﻿namespace PrimePaper.Business.DataContract.Product
 {
    public class ProductEditDTO
     {

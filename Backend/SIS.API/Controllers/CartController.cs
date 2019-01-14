@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using PrimePaper.API.DataContract.Cart;
 using PrimePaper.Business.DataContract.Cart;
 using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace PrimePaper.API.Controllers
 {
@@ -74,6 +76,21 @@ namespace PrimePaper.API.Controllers
             }
 
             throw new Exception();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCartItems()
+        {
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(400);
+            }
+
+            var user_id = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var dto = await _manager.GetCartItems(user_id);
+            var response = _mapper.Map<IEnumerable<CartResponse>>(dto);
+
+            return Ok(response); //TODO : Handle exceptions
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using PrimePaper.Business.DataContract.Product;
 using PrimePaper.Database.DataContract.Product;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace PrimePaper.Business.Managers
@@ -53,18 +52,18 @@ namespace PrimePaper.Business.Managers
             return false;
         }
 
-        public async Task<ProductGetListItemDTO> GetProductById(int id)
+        public async Task<ProductGetDTO> GetProductById(int id)
         {
             var rao = await _repository.GetProductById(id);
-            var dto = _mapper.Map<ProductGetListItemDTO>(rao);
+            var dto = _mapper.Map<ProductGetDTO>(rao);
 
             return dto;
         }
 
-        public async Task<IEnumerable<ProductGetListItemDTO>> GetProducts()
+        public async Task<IEnumerable<ProductGetDTO>> GetProducts()
         {
             var rao = await _repository.GetProducts();
-            var dto = _mapper.Map<IEnumerable<ProductGetListItemDTO>>(rao);
+            var dto = _mapper.Map<IEnumerable<ProductGetDTO>>(rao);
 
             return dto;
         }
