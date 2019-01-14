@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrimePaper.Business.DataContract.Product
+﻿namespace PrimePaper.Business.DataContract.Product
 {
-   public class ProductGetListItemDTO
+   public class ProductGetDTO
     {
         public int ProductEntityId { get; set; }
         public string ProductName { get; set; }

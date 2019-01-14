@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrimePaper.Database.DataContract.Product
+﻿namespace PrimePaper.Database.DataContract.Product
 {
     public class ProductCreateRAO
     {

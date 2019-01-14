@@ -53,5 +53,13 @@ namespace PrimePaper.Business.Managers
 
             return false;
         }
+
+        public async Task<IEnumerable<CartGetDTO>> GetCartItems(int user_id)
+        {
+            var rao = await _repository.GetCartItems(user_id);
+            var dto = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
+
+            return dto;
+        }
     }
 }
