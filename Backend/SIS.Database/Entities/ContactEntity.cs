@@ -36,12 +36,10 @@ namespace PrimePaper.Database.Entities
         public string Zip { get; set; }
 
         [Required]
-        public int OwnerId { get; set; } //TODO: GUID?
+        public int OwnerId { get; set; } 
 
 
         [Required]
         public DateTimeOffset DateCreated { get; set; }
-
-        public DateTimeOffset? DateModified { get; set; }
     }
 }

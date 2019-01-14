@@ -8,7 +8,7 @@ namespace PrimePaper.Business.DataContract.Product
         Task<bool> CreateProduct(ProductCreateDTO dto);
         Task<bool> EditProduct(ProductEditDTO dto);
         Task<bool> DeleteProduct(int id);
-        Task<IEnumerable<ProductGetListItemDTO>> GetProducts(); //preexisting so no 
-        Task<ProductGetListItemDTO> GetProductById(int id);
+        Task<IEnumerable<ProductGetDTO>> GetProducts();
+        Task<ProductGetDTO> GetProductById(int id);
     }
 }

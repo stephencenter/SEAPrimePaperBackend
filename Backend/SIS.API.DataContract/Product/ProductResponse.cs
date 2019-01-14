@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrimePaper.API.DataContract.Product
+﻿namespace PrimePaper.API.DataContract.Product
 {
    public class ProductResponse
     {
