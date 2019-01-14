@@ -5,5 +5,6 @@ namespace PrimePaper.Business.DataContract.Cart
     public interface ICartManager
     {
         Task<bool> CreateCartItem(CartCreateDTO dto);
+        Task<bool> EditCartItem(CartEditDTO dto);
     }
 }

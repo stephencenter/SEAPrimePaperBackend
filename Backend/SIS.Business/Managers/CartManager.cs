@@ -31,5 +31,17 @@ namespace PrimePaper.Business.Managers
 
             return false;
         }
+
+        public async Task<bool> EditCartItem(CartEditDTO dto)
+        {
+            var rao = _mapper.Map<CartEditRAO>(dto);
+
+            if (await _repository.EditCartItem(rao))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
