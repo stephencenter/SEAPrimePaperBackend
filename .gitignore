@@ -5,3 +5,4 @@
 /.vs/Backend/v15/Server/sqlite3/storage.ide-wal
 /Backend/obj/
 /Backend/SIS.Database/Migrations/
+db.lock
