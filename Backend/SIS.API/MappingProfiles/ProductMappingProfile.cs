@@ -21,6 +21,8 @@ namespace RedStarter.API.MappingProfiles
 
             CreateMap<ProductEditRequest, ProductEditDTO>();
             CreateMap<ProductEditDTO, ProductEditRAO>();
+            CreateMap<ProductEditRAO, ProductEntity>();
+
            
         }
     }

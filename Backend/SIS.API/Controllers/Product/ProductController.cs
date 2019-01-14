@@ -47,7 +47,7 @@ namespace RedStarter.API.Controllers.Product
 
         [HttpPut]
         // [Authorize(Roles ="Admin")]
-        public async Task<IActionResult> EditProduct(ProductEditRequest request)
+        public async Task<IActionResult> EditProduct([FromBody]ProductEditRequest request, [FromForm]ProductEditRequest request2)
         {
             if (!ModelState.IsValid)
             {
@@ -103,7 +103,6 @@ namespace RedStarter.API.Controllers.Product
                 return StatusCode(400);
             }
 
-            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             var dto = await _manager.GetProductById(id);
             var response = _mapper.Map<ProductResponse>(dto);

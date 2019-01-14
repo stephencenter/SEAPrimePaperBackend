@@ -42,19 +42,19 @@ namespace RedStarter.Database.Product
             return await _context.SaveChangesAsync() == 1;
         }
 
-        public async Task<ProductGetListItemRAO> GetProductById(int id)
+        public async Task<ContactGetListItemRAO> GetProductById(int id)
         {
             var query = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
-            var rao = _mapper.Map<ProductGetListItemRAO>(query);
+            var rao = _mapper.Map<ContactGetListItemRAO>(query);
 
             return rao;
         }
 
-        public async Task<IEnumerable<ProductGetListItemRAO>> GetProducts()
+        public async Task<IEnumerable<ContactGetListItemRAO>> GetProducts()
         {
 
             var query = await _context.ProductTableAccess.ToArrayAsync();
-            var rao = _mapper.Map<IEnumerable<ProductGetListItemRAO>>(query);
+            var rao = _mapper.Map<IEnumerable<ContactGetListItemRAO>>(query);
 
             return rao;
 

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RedStarter.Business.DataContract.Contact
+namespace RedStarter.Database.DataContract.Application
 {
-   public class ContactListItemDTO
+    public class ContactGetListItemRAO
     {
         public int ContactEntityId { get; set; }
         public string FirstName { get; set; }

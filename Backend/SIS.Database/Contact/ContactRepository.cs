@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RedStarter.Database.Contexts;
 using RedStarter.Database.DataContract.Application;
+using RedStarter.Database.DataContract.Product;
 using RedStarter.Database.Entities.Application;
 using RedStarter.Database.Entities.People;
 using System;
@@ -40,11 +41,18 @@ namespace RedStarter.Database.Contact
             return await _context.SaveChangesAsync() == 1;
 
         }
+        public async Task<DataContract.Product.ContactGetListItemRAO> GetContactById(int id)
+        {
+            var query = _context.ContactTableAccess.Single(x => x.ContactEntityId == id);
+            var rao = _mapper.Map<DataContract.Product.ContactGetListItemRAO>(query);
 
-        public async Task<IEnumerable<ContactListItemRAO>> GetAllContacts()
+            return rao;
+        }
+
+        public async Task<IEnumerable<DataContract.Application.ContactGetListItemRAO>> GetAllContacts()
         {
             var EntityList = await _context.ContactTableAccess.ToArrayAsync();
-            var List = _mapper.Map<IEnumerable<ContactListItemRAO>>(EntityList);
+            var List = _mapper.Map<IEnumerable<DataContract.Application.ContactGetListItemRAO>>(EntityList);
 
             return List;
         }

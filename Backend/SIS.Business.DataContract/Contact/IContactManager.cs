@@ -13,5 +13,7 @@ namespace RedStarter.Business.DataContract.Contact.Interfaces
 
         Task<bool> EditContact(ContactEditDTO dto);
 
+        Task<ContactGetListItemDTO> GetContactById(int id);
+
     }
 }
