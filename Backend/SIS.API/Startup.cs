@@ -96,6 +96,7 @@ namespace PrimePaper.API
                 mc.AddProfile(new MappingProfile());
                 mc.AddProfile(new ContactMappingProfile());
                 mc.AddProfile(new ProductMappingProfile());
+                mc.AddProfile(new CartMappingProfile());
             });
 
             IMapper mapper = mappingConfig.CreateMapper();

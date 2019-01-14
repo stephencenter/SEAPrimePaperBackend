@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PrimePaper.API.DataContract.Cart;
 using PrimePaper.Business.DataContract.Cart;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace PrimePaper.API.Controllers
@@ -28,7 +29,9 @@ namespace PrimePaper.API.Controllers
                 return StatusCode(400);
             }
 
+            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var dto = _mapper.Map<CartCreateDTO>(request);
+            dto.OwnerId = identityClaimNum;
 
             if (await _manager.CreateCartItem(dto))
             {

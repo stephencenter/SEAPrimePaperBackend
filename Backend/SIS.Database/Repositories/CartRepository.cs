@@ -4,6 +4,7 @@ using PrimePaper.Database.DataContract.Cart;
 using PrimePaper.Database.Entities;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace PrimePaper.Database.Repositories
 {
@@ -11,6 +12,7 @@ namespace PrimePaper.Database.Repositories
     {
         private readonly SISContext _context;
         private readonly IMapper _mapper;
+        private readonly UserManager<UserEntity> _userManager;
 
         public CartRepository(SISContext context, IMapper mapper)
         {
