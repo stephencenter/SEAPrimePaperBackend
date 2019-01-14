@@ -43,6 +43,16 @@ namespace PrimePaper.Business.Managers
             return false;
         }
 
+        public async Task<bool> DeleteProduct(int id)
+        {
+            if (await _repository.DeleteProduct(id))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public async Task<ProductGetListItemDTO> GetProductById(int id)
         {
             var rao = await _repository.GetProductById(id);
@@ -57,16 +67,6 @@ namespace PrimePaper.Business.Managers
             var dto = _mapper.Map<IEnumerable<ProductGetListItemDTO>>(rao);
 
             return dto;
-        }
-
-        public async Task<bool> DeleteProduct(int id)
-        {
-            if (await _repository.DeleteProduct(id))
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }
