@@ -16,3 +16,12 @@ C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\B
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.AssemblyInfo.cs
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.dll
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.pdb
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.deps.json
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.dll
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.pdb
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.csprojAssemblyReference.cache
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.csproj.CoreCompileInputs.cache
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.AssemblyInfoInputs.cache
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.AssemblyInfo.cs
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.dll
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API.DataContract\obj\Debug\netcoreapp2.1\PrimePaper.API.DataContract.pdb
