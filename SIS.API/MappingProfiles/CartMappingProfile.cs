@@ -18,6 +18,10 @@ namespace PrimePaper.API.MappingProfiles
             CreateMap<CartEditRequest, CartEditDTO>();
             CreateMap<CartEditDTO, CartEditRAO>();
             CreateMap<CartEditRAO, CartEntity>();
+
+            CreateMap<CartResponse, CartGetDTO>();
+            CreateMap<CartGetDTO, CartGetRAO>();
+            CreateMap<CartEntity, CartGetRAO>().ForMember(e => e.ProductName, opt => opt.Ignore());
         }
     }
 }
