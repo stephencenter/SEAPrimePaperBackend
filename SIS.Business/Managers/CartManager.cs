@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using PrimePaper.Business.DataContract.Cart;
+using PrimePaper.Business.DataContract.Product;
 using PrimePaper.Database.DataContract.Cart;
+using PrimePaper.Database.DataContract.Product;
 using PrimePaper.Database.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,15 +11,17 @@ using System.Threading.Tasks;
 
 namespace PrimePaper.Business.Managers
 {
-    public class CartManager : ICartManager
+    public class CartManager : ICartManager 
     {
         private readonly IMapper _mapper;
         private readonly ICartRepository _repository;
+        private readonly IProductRepository _productRepository;
 
-        public CartManager(IMapper mapper, ICartRepository repository)
+        public CartManager(IMapper mapper, ICartRepository repository, IProductRepository productRepository)
         {
             _mapper = mapper;
             _repository = repository;
+            _productRepository = productRepository;
         }
 
         public async Task<bool> CreateCartItem(CartCreateDTO dto)
@@ -56,10 +60,17 @@ namespace PrimePaper.Business.Managers
 
         public async Task<IEnumerable<CartGetDTO>> GetCartItems(int user_id)
         {
+            //Need to get the ProductName and Price to map in to the cartListdto
             var rao = await _repository.GetCartItems(user_id);
-            var dto = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
+            var cartListdto = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
+            foreach(var r in cartListdto)
+            {
+                var productrao = await _productRepository.GetProductById(r.ProductEntityId);
+                r.ProductName = productrao.ProductName;
+                r.Price = productrao.Price;
+            }
 
-            return dto;
+            return cartListdto;
         }
     }
 }
