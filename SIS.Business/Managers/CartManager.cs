@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using PrimePaper.Business.DataContract.Cart;
-using PrimePaper.Business.DataContract.Product;
+using PrimePaper.Business.Engines;
 using PrimePaper.Database.DataContract.Cart;
 using PrimePaper.Database.DataContract.Product;
-using PrimePaper.Database.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace PrimePaper.Business.Managers
@@ -60,17 +57,25 @@ namespace PrimePaper.Business.Managers
 
         public async Task<IEnumerable<CartGetDTO>> GetCartItems(int user_id)
         {
-            //Need to get the ProductName and Price to map in to the cartListdto
+            // Need to get the ProductName and Price to map in to the cartListdto
             var rao = await _repository.GetCartItems(user_id);
-            var cartListdto = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
-            foreach(var r in cartListdto)
+            var list_of_dtos = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
+
+            foreach(var r in list_of_dtos)
             {
                 var productrao = await _productRepository.GetProductById(r.ProductEntityId);
                 r.ProductName = productrao.ProductName;
                 r.Price = productrao.Price;
             }
 
-            return cartListdto;
+            // We have to calculate the subtotal after we set the prices
+            double subtotal = CartEngine.CalculateSubtotal(list_of_dtos);
+            foreach (var r in list_of_dtos)
+            {
+                r.Subtotal = subtotal;
+            }
+
+            return list_of_dtos;
         }
     }
 }

@@ -1,21 +1,3 @@
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.deps.json
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csprojAssemblyReference.cache
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csproj.CoreCompileInputs.cache
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.AssemblyInfoInputs.cache
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.AssemblyInfo.cs
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csproj.CopyComplete
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.dll
-C:\DotNetProjects\SEAPrimePaperBackend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.pdb
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.deps.json
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.dll
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.pdb
@@ -34,21 +16,3 @@ C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\B
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csproj.CopyComplete
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.dll
 C:\Users\steph\Documents\Eleven Fifty Projects\Prime Paper\Prime Paper Backend\Backend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.deps.json
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.DataContract.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.API.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Business.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.DataContract.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\bin\Debug\netcoreapp2.1\PrimePaper.Database.pdb
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csprojAssemblyReference.cache
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csproj.CoreCompileInputs.cache
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.AssemblyInfoInputs.cache
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.AssemblyInfo.cs
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.csproj.CopyComplete
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.dll
-C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.Business\obj\Debug\netcoreapp2.1\PrimePaper.Business.pdb

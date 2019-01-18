@@ -2,7 +2,6 @@
 using PrimePaper.Business.DataContract.Product;
 using PrimePaper.Database.DataContract.Product;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PrimePaper.Business.Managers
