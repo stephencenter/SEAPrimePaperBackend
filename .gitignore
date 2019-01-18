@@ -3,10 +3,9 @@
 /.vs/Backend/v15/Server/sqlite3/storage.ide
 /.vs/Backend/v15/Server/sqlite3/storage.ide-shm
 /.vs/Backend/v15/Server/sqlite3/storage.ide-wal
-/Backend/obj/
-/Backend/SIS.Database/Migrations/
 db.lock
 
+/SIS.API/.vs/
 /SIS.API/obj/
 /SIS.API.DataContract/obj/
 /SIS.API.UnitTests/obj/
@@ -14,12 +13,12 @@ db.lock
 /SIS.API.DataContract/bin/
 /SIS.API.UnitTests/bin/
 
-/SIS.Database/obj/
-/SIS.Database.DataContract/obj/
-/SIS.Database.Tests/obj/
-/SIS.Database/bin/
-/SIS.Database.DataContract/bin/
-/SIS.Database.Tests/bin/
+/SIS.Business/obj/
+/SIS.Business.DataContract/obj/
+/SIS.Business.Tests/obj/
+/SIS.Business/bin/
+/SIS.Business.DataContract/bin/
+/SIS.Business.Tests/bin/
 
 /SIS.Database/obj/
 /SIS.Database.DataContract/obj/
@@ -27,4 +26,3 @@ db.lock
 /SIS.Database/bin/
 /SIS.Database.DataContract/bin/
 /SIS.Database.Tests/bin/
-/SIS.API/.vs/
