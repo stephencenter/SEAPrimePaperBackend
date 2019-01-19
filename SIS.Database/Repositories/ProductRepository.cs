@@ -38,8 +38,12 @@ namespace PrimePaper.Database.Repositories
 
         public async Task<bool> DeleteProduct(int id)
         {
-            _context.ProductTableAccess.Remove(_context.ProductTableAccess.Single(x => x.ProductEntityId == id));
-            return await _context.SaveChangesAsync() == 1;
+            var entity = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
+            _context.ProductTableAccess.Remove(entity);
+            DeleteCartItemWithProductID(id);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         public async Task<ProductGetRAO> GetProductById(int id)
@@ -56,6 +60,12 @@ namespace PrimePaper.Database.Repositories
             var rao = _mapper.Map<IEnumerable<ProductGetRAO>>(query);
 
             return rao;
+        }
+
+        public void DeleteCartItemWithProductID(int product_id)
+        {
+            var entity = _context.CartTableAccess.Single(x => x.ProductEntityId == product_id);
+            _context.CartTableAccess.Remove(entity);
         }
     }
 }
