@@ -38,14 +38,12 @@ namespace PrimePaper.Database.Repositories
 
         public async Task<bool> DeleteProduct(int id)
         {
-            _context.ProductTableAccess.Remove(_context.ProductTableAccess.Single(x => x.ProductEntityId == id));
+            var entity = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
+            _context.ProductTableAccess.Remove(entity);
+            DeleteCartItemWithProductID(id);
+            await _context.SaveChangesAsync();
 
-            if (DeleteAllCartItemsWithProductID(id))
-            {
-                return false;
-            }
-
-            return await _context.SaveChangesAsync() == 1;
+            return true;
         }
 
         public async Task<ProductGetRAO> GetProductById(int id)
@@ -64,21 +62,10 @@ namespace PrimePaper.Database.Repositories
             return rao;
         }
 
-        public bool DeleteAllCartItemsWithProductID(int product_id)
+        public void DeleteCartItemWithProductID(int product_id)
         {
-            var query = _context.CartTableAccess.ToArray();
-
-            int total_changed = 0;
-            foreach (CartEntity entity in query)
-            {
-                if (entity.ProductEntityId == product_id)
-                {
-                    _context.CartTableAccess.Remove(entity);
-                    total_changed += 1;
-                }
-            }
-
-            return _context.SaveChanges() == total_changed;
+            var entity = _context.CartTableAccess.Single(x => x.ProductEntityId == product_id);
+            _context.CartTableAccess.Remove(entity);
         }
     }
 }
