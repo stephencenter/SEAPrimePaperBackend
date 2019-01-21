@@ -47,7 +47,8 @@ namespace PrimePaper.Database.Repositories
                 await _context.CartTableAccess.AddAsync(entity);
             }
 
-            return await _context.SaveChangesAsync() == 1;
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<bool> EditCartItem(CartEditRAO rao)

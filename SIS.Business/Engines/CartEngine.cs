@@ -11,7 +11,7 @@ namespace PrimePaper.Business.Engines
 
             foreach (CartGetDTO dto in cart)
             {
-                subtotal += dto.Price;
+                subtotal += dto.Price*dto.Quantity;
             }
 
             return subtotal;
