@@ -73,3 +73,4 @@ C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API\obj\Debug\ne
 C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API\obj\Debug\netcoreapp2.1\PrimePaper.API.csproj.CopyComplete
 C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API\obj\Debug\netcoreapp2.1\PrimePaper.API.dll
 C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API\obj\Debug\netcoreapp2.1\PrimePaper.API.pdb
+C:\DotNetProjects\SEAPrimePaperBackend\SEAPrimePaperBackend\SIS.API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
