@@ -61,18 +61,18 @@ namespace PrimePaper.Business.Managers
             var rao = await _repository.GetCartItems(user_id);
             var list_of_dtos = _mapper.Map<IEnumerable<CartGetDTO>>(rao);
 
-            foreach(var r in list_of_dtos)
+            foreach(var dto1 in list_of_dtos)
             {
-                var productrao = await _productRepository.GetProductById(r.ProductEntityId);
-                r.ProductName = productrao.ProductName;
-                r.Price = productrao.Price;
+                var productrao = await _productRepository.GetProductById(dto1.ProductEntityId);
+                dto1.ProductName = productrao.ProductName;
+                dto1.Price = productrao.Price;
             }
 
             // We have to calculate the subtotal after we set the prices
             double subtotal = CartEngine.CalculateSubtotal(list_of_dtos);
-            foreach (var r in list_of_dtos)
+            foreach (var dto2 in list_of_dtos)
             {
-                r.Subtotal = subtotal;
+                dto2.Subtotal = subtotal;
             }
 
             return list_of_dtos;

@@ -38,7 +38,7 @@ namespace PrimePaper.Database.Repositories
 
         public async Task<ContactGetListItemRAO> GetContactById(int id)
         {
-            var query = _context.ContactTableAccess.Single(x => x.ContactEntityId == id);
+            var query = _context.ContactTableAccess.Single(x => x.OwnerId == id);
             var rao = _mapper.Map<ContactGetListItemRAO>(query);
 
             return rao;

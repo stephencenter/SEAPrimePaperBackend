@@ -40,7 +40,12 @@ namespace PrimePaper.Database.Repositories
         {
             var entity = _context.ProductTableAccess.Single(x => x.ProductEntityId == id);
             _context.ProductTableAccess.Remove(entity);
-            DeleteCartItemWithProductID(id);
+
+            if (_context.CartTableAccess.Any(x => x.ProductEntityId == entity.ProductEntityId))
+            {
+                DeleteCartItemWithProductID(id);
+            }
+
             await _context.SaveChangesAsync();
 
             return true;
@@ -62,10 +67,11 @@ namespace PrimePaper.Database.Repositories
             return rao;
         }
 
-        public void DeleteCartItemWithProductID(int product_id)
+        public async void DeleteCartItemWithProductID(int product_id)
         {
-            var entity = _context.CartTableAccess.Single(x => x.ProductEntityId == product_id);
-            _context.CartTableAccess.Remove(entity);
+            var deleted_items = _context.CartTableAccess.Where(x => x.ProductEntityId == product_id);
+            await deleted_items.ForEachAsync(x => _context.CartTableAccess.Remove(x));
+            await _context.SaveChangesAsync();
         }
     }
 }
