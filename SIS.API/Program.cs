@@ -12,6 +12,8 @@ namespace PrimePaper.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseSetting("detailedErrors", "true")
+                .UseStartup<Startup>()
+            .CaptureStartupErrors(true);
     }
 }

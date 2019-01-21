@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PrimePaper.Database.Migrations
 {
-    public partial class stuff : Migration
+    public partial class stuff3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
