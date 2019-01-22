@@ -10,8 +10,8 @@ using PrimePaper.Database.Contexts;
 namespace PrimePaper.Database.Migrations
 {
     [DbContext(typeof(SISContext))]
-    [Migration("20190122164020_things")]
-    partial class things
+    [Migration("20190122182248_stuff2")]
+    partial class stuff2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

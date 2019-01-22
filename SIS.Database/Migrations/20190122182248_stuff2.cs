@@ -2,7 +2,7 @@
 
 namespace PrimePaper.Database.Migrations
 {
-    public partial class things : Migration
+    public partial class stuff2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

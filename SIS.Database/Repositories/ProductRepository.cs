@@ -67,11 +67,16 @@ namespace PrimePaper.Database.Repositories
             return rao;
         }
 
-        public async void DeleteCartItemWithProductID(int product_id)
+        public void DeleteCartItemWithProductID(int product_id)
         {
             var deleted_items = _context.CartTableAccess.Where(x => x.ProductEntityId == product_id);
-            await deleted_items.ForEachAsync(x => _context.CartTableAccess.Remove(x));
-            await _context.SaveChangesAsync();
+
+            foreach (CartEntity item in deleted_items)
+            {
+                _context.CartTableAccess.Remove(item);
+            }
+
+            _context.SaveChanges();
         }
     }
 }
