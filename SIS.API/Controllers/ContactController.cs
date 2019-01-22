@@ -49,7 +49,9 @@ namespace PrimePaper.API.Controllers
                 return StatusCode(400);
             }
 
+            var identityClaimNum = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var dto = _mapper.Map<ContactEditDTO>(request);
+            dto.OwnerId = identityClaimNum;
 
             if (await _contactCreateManager.EditContact(dto))
             {
