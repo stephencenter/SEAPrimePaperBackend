@@ -44,7 +44,7 @@ namespace PrimePaper.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> EditCartItem([FromBody]CartEditRequest request, [FromForm]CartEditRequest request2)
+        public async Task<IActionResult> EditCartItem([FromBody]CartEditRequest request)
         {
             if (!ModelState.IsValid)
             {

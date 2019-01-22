@@ -24,7 +24,7 @@ namespace PrimePaper.API.Controllers
         }
 
         [HttpPost]
-        // [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> CreateProduct(ProductCreateRequest request)
         {
             if (!ModelState.IsValid)
@@ -43,7 +43,7 @@ namespace PrimePaper.API.Controllers
         }
 
         [HttpPut]
-        // [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> EditProduct([FromBody]ProductEditRequest request, [FromForm]ProductEditRequest request2)
         {
             if (!ModelState.IsValid)
@@ -62,7 +62,7 @@ namespace PrimePaper.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        // [Authorize(Roles ="Admin")]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             if (!ModelState.IsValid)
