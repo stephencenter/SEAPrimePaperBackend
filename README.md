@@ -2,7 +2,9 @@ PRIME PAPER WEBSITE
 
 Developed by Team SEA:
     Stephen Center
+	
     Edson Silva
+	
     Aidan Vandiver
 	
 Prime Paper is a Brazilian paper distributor owned and run by
